@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { href: "/about", label: "About Us" },
@@ -14,6 +15,7 @@ const navLinks = [
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-50 bg-cwa-purple shadow-lg">
@@ -33,15 +35,25 @@ export default function Header() {
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-white/80 hover:text-white hover:bg-white/10 px-3 py-2 rounded-md text-sm font-sans font-semibold transition-all duration-150"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href || pathname.startsWith(link.href + "/");
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`relative px-3 py-2 rounded-md text-sm font-sans font-semibold transition-all duration-150 ${
+                    isActive
+                      ? "text-cwa-gold bg-white/10"
+                      : "text-white/80 hover:text-white hover:bg-white/10"
+                  }`}
+                >
+                  {link.label}
+                  {isActive && (
+                    <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-cwa-gold rounded-full" />
+                  )}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* CTA + Hamburger */}
@@ -88,16 +100,23 @@ export default function Header() {
         }`}
       >
         <nav className="bg-cwa-purple border-t border-white/10 px-4 py-4 flex flex-col gap-1">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setMobileOpen(false)}
-              className="text-white/80 hover:text-white hover:bg-white/10 px-3 py-3 rounded-md text-base font-sans font-semibold transition-all"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href || pathname.startsWith(link.href + "/");
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className={`px-3 py-3 rounded-md text-base font-sans font-semibold transition-all border-l-2 ${
+                  isActive
+                    ? "text-cwa-gold bg-white/10 border-cwa-gold"
+                    : "text-white/80 hover:text-white hover:bg-white/10 border-transparent"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
           <Link
             href="/membership"
             onClick={() => setMobileOpen(false)}
