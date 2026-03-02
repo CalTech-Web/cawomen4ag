@@ -6,6 +6,7 @@ import TestimonialCard from "@/components/TestimonialCard";
 import EventCard from "@/components/EventCard";
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
+import FadeIn from "@/components/FadeIn";
 
 const stats = [
   { value: "50+", label: "Years of Service" },
@@ -175,7 +176,7 @@ export default function HomePage() {
       {/* Mission Section */}
       <SectionWrapper bg="white" py="lg">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
+          <FadeIn direction="left">
             <p className="font-spartan font-semibold text-cwa-green text-sm uppercase tracking-widest mb-3">
               Our Mission
             </p>
@@ -196,8 +197,8 @@ export default function HomePage() {
                 Our Programs
               </Button>
             </div>
-          </div>
-          <div className="relative">
+          </FadeIn>
+          <FadeIn direction="right" className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
               <Image
                 src="/images/cawomen-join-us-1024x644.jpg"
@@ -212,7 +213,7 @@ export default function HomePage() {
               <p className="font-spartan font-extrabold text-2xl leading-none">50</p>
               <p className="font-spartan font-bold text-sm">Years Strong</p>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </SectionWrapper>
 
@@ -228,7 +229,9 @@ export default function HomePage() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {programs.map((program, i) => (
-            <ProgramCard key={i} {...program} />
+            <FadeIn key={i} delay={i * 80} className="h-full">
+              <ProgramCard {...program} />
+            </FadeIn>
           ))}
         </div>
       </SectionWrapper>
@@ -245,7 +248,9 @@ export default function HomePage() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {testimonials.map((t, i) => (
-            <TestimonialCard key={i} {...t} />
+            <FadeIn key={i} delay={i * 100} className="h-full">
+              <TestimonialCard {...t} />
+            </FadeIn>
           ))}
         </div>
       </SectionWrapper>
@@ -267,7 +272,9 @@ export default function HomePage() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {upcomingEvents.map((event, i) => (
-            <EventCard key={i} {...event} />
+            <FadeIn key={i} delay={i * 100}>
+              <EventCard {...event} />
+            </FadeIn>
           ))}
         </div>
       </SectionWrapper>
@@ -301,6 +308,7 @@ export default function HomePage() {
 
       {/* Final CTA */}
       <SectionWrapper bg="dark" py="lg">
+        <FadeIn direction="up">
         <div className="text-center max-w-2xl mx-auto">
           <p className="font-spartan font-semibold text-cwa-gold text-sm uppercase tracking-widest mb-4">
             Be Part of the Change
@@ -320,6 +328,7 @@ export default function HomePage() {
             </Button>
           </div>
         </div>
+        </FadeIn>
       </SectionWrapper>
     </>
   );
