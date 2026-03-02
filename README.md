@@ -1,11 +1,16 @@
-# California Women For Agriculture
+# cawomen4ag
 
-Next.js website for California Women For Agriculture (CWA).
+Tech stack: Next.js, TypeScript, Tailwind CSS, Vercel
+Site: https://cawomen4ag.com
+Dev URL: https://cawomen4ag.vercel.app
 
-**Tech Stack:** Next.js 16 (App Router) | TypeScript | Tailwind CSS | Google Fonts (League Spartan, Source Sans 3)
 
-**Dev URL:** https://cawomen4ag.vercel.app
+## Run Agents
 
-**Live Site:** https://cawomen4ag.com
+WORK=~/ctw/cawomen4ag/agents/design-agent MODEL="sonnet" MAX_LOOPS=5 bash ~/ctw/ENGINE/run.sh
 
-**GitHub:** https://github.com/CalTech-Web/cawomen4ag
+WORK=~/ctw/cawomen4ag/agents/content-agent MODEL="sonnet" MAX_LOOPS=5 bash ~/ctw/ENGINE/run.sh
+
+WORK=~/ctw/cawomen4ag/agents/seo-agent MODEL="sonnet" MAX_LOOPS=5 bash ~/ctw/ENGINE/run.sh
+
+WORK=~/ctw/cawomen4ag/agents/pagespeed-agent MODEL="sonnet" MAX_LOOPS=5 bash ~/ctw/ENGINE/run.sh
