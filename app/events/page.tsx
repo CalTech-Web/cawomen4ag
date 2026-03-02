@@ -12,49 +12,40 @@ export const metadata: Metadata = {
 
 const events = [
   {
-    title: "48th Annual AG Booster BBQ",
-    date: "September 7, 2025",
-    location: "Fresno, CA",
-    description:
-      "Our flagship annual fundraiser brings the agricultural community together for an evening of food, celebration, and support for CWA's education and advocacy programs. All proceeds benefit CWA's statewide programs.",
-    featured: false,
-    category: "Fundraiser",
-  },
-  {
-    title: "September Statewide Meeting",
+    title: "September SWM and Ag Booster BBQ Fundraiser, Central District",
     date: "September 2025",
-    location: "TBD (in-person and virtual)",
+    location: "Central District",
     description:
-      "CWA's fall statewide meeting open to all members. Attend in person or join virtually. Agenda includes legislative updates, program reports, and chapter news from across California.",
+      "CWA's September Statewide Meeting and the annual Ag Booster BBQ Fundraiser hosted by the Central District.",
     featured: false,
     category: "Meeting",
   },
   {
-    title: "50th Anniversary Golden Weekend Celebration",
-    date: "November 7-9, 2025",
-    location: "Embassy Suites, La Quinta, CA",
+    title: "November SWM and 50th Anniversary, La Quinta, CA Southern District",
+    date: "November 2025",
+    location: "La Quinta, CA",
     description:
-      "A landmark three-day celebration marking CWA's 50th anniversary. Join founding members, current leaders, and the entire CWA family for a Golden Weekend honoring five decades of empowering California agriculture. The celebration included a tribute to founding member Cherry Ishimatsu, who celebrated her 100th birthday.",
+      "CWA's November Statewide Meeting and 50th Anniversary celebration hosted by the Southern District in La Quinta, CA.",
     featured: true,
     category: "Anniversary",
   },
   {
-    title: "Convention and Annual Meeting: Agriculture: California's Gold",
-    date: "January 9-11, 2026",
-    location: "Manteca, CA",
+    title: "AAW 50th Annual Convention, La Quinta",
+    date: "La Quinta, CA",
+    location: "La Quinta, CA",
     description:
-      "CWA's annual convention and statewide meeting. The theme for 2026 is \"Agriculture: California's Gold.\" Join members from across the state for elections, legislative briefings, program showcases, awards, and networking.",
+      "The American Agri Women 50th Annual Convention in La Quinta.",
     featured: false,
     category: "Convention",
   },
   {
-    title: "May Legislative Days",
-    date: "May 4-5, 2026",
-    location: "Sacramento, CA",
+    title: "CWA 2026 Annual Meeting, Convention and January SWM, Stockton, CA",
+    date: "January 2026",
+    location: "Stockton, CA",
     description:
-      "CWA's annual two-day advocacy event at the State Capitol. Members meet directly with California legislators to advocate for the agricultural industry. Ten scholarships are awarded during this event. Attendance scholarships available through the CWA Foundation.",
+      "CWA's 2026 Annual Meeting, Convention and January Statewide Meeting held in Stockton, CA.",
     featured: false,
-    category: "Advocacy",
+    category: "Convention",
   },
 ];
 
@@ -71,8 +62,7 @@ export default function EventsPage() {
     <>
       <Hero
         subtitle="Events"
-        title="Join Us at These Upcoming Events"
-        description="From fundraisers to the State Capitol, CWA events are where advocacy meets community. Members across California's 19 chapters gather to advocate, celebrate, and connect."
+        title="Upcoming Events"
         compact
       />
 
@@ -132,41 +122,23 @@ export default function EventsPage() {
         </div>
       </SectionWrapper>
 
-      {/* Stay Informed */}
+      {/* Contact CTA */}
       <SectionWrapper bg="light" py="md">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="font-spartan font-extrabold text-cwa-dark text-3xl mb-4">
-            Never Miss a CWA Event
+            Questions About Events?
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed mb-6 font-sans">
-            Subscribe to The Compass Newsletter to receive quarterly event announcements, legislative updates, and CWA news delivered directly to you.
+            Contact the CWA state office for more information about upcoming events and statewide meetings.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button href="/membership" variant="primary">
+            <Button href="/contact" variant="primary">
+              Contact Us
+            </Button>
+            <Button href="/membership" variant="outline">
               Become a Member
             </Button>
-            <Button href="/contact" variant="outline">
-              Contact for Event Info
-            </Button>
           </div>
-        </div>
-      </SectionWrapper>
-
-      {/* Scholarship CTA */}
-      <SectionWrapper bg="purple" py="md">
-        <div className="max-w-2xl mx-auto text-center">
-          <p className="font-spartan font-semibold text-cwa-gold text-sm uppercase tracking-widest mb-3">
-            Capitol Advocacy Scholarship
-          </p>
-          <h2 className="font-spartan font-extrabold text-white text-3xl mb-4">
-            First-Time Attendee Scholarship Available
-          </h2>
-          <p className="text-white/80 text-base leading-relaxed mb-6 font-sans">
-            Are you a CWA member who has never attended CWA's State Capitol Advocacy Event? The CWA Foundation offers a $300 scholarship to help defray lodging and travel costs to attend May Legislative Days in Sacramento.
-          </p>
-          <Button href="/foundation" variant="primary">
-            Learn About the Foundation
-          </Button>
         </div>
       </SectionWrapper>
     </>

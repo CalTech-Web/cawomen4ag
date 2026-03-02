@@ -1,16 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/programs", label: "Programs" },
-  { href: "/membership", label: "Membership" },
+  { href: "/about", label: "About Us" },
   { href: "/events", label: "Events" },
   { href: "/chapters", label: "Chapters" },
-  { href: "/foundation", label: "Foundation" },
+  { href: "/membership", label: "Membership" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -22,18 +20,15 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 bg-cwa-gold rounded-full flex items-center justify-center flex-shrink-0">
-              <span className="text-cwa-dark font-spartan font-bold text-sm">CWA</span>
-            </div>
-            <div className="hidden sm:block">
-              <p className="font-spartan font-bold text-white text-sm leading-tight">
-                California Women
-              </p>
-              <p className="font-spartan font-bold text-cwa-gold text-sm leading-tight">
-                For Agriculture
-              </p>
-            </div>
+          <Link href="/" className="flex items-center group">
+            <Image
+              src="/images/cwa-logo.webp"
+              alt="California Women For Agriculture"
+              width={80}
+              height={80}
+              className="object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}

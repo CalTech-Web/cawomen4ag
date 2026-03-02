@@ -35,6 +35,10 @@ export const metadata: Metadata = {
     "agricultural education",
   ],
   authors: [{ name: "California Women For Agriculture" }],
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
   openGraph: {
     title: "California Women For Agriculture | Empowering Ag Since 1975",
     description:

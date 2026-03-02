@@ -123,27 +123,27 @@ const testimonials = [
 
 const upcomingEvents = [
   {
-    title: "48th Annual AG Booster BBQ",
-    date: "September 7, 2025",
-    location: "Fresno, CA",
+    title: "September SWM and Ag Booster BBQ Fundraiser, Central District",
+    date: "September 2025",
+    location: "Central District",
     description:
-      "Our flagship annual fundraiser supporting agricultural education and outreach programs across California.",
+      "CWA's September Statewide Meeting and annual Ag Booster BBQ Fundraiser hosted by the Central District.",
     featured: false,
   },
   {
-    title: "50th Anniversary Golden Weekend Celebration",
-    date: "November 7-9, 2025",
-    location: "Embassy Suites, La Quinta, CA",
+    title: "November SWM and 50th Anniversary, La Quinta, CA Southern District",
+    date: "November 2025",
+    location: "La Quinta, CA",
     description:
-      "Celebrating 50 years of empowering women in California agriculture. A landmark weekend honoring our founding members and legacy.",
+      "CWA's November Statewide Meeting and 50th Anniversary celebration hosted by the Southern District.",
     featured: true,
   },
   {
-    title: "Convention and Annual Meeting: Agriculture: California's Gold",
-    date: "January 9-11, 2026",
-    location: "Manteca, CA",
+    title: "CWA 2026 Annual Meeting, Convention and January SWM",
+    date: "January 2026",
+    location: "Stockton, CA",
     description:
-      "Join us for the annual convention featuring leadership sessions, legislative updates, and networking.",
+      "CWA's 2026 Annual Meeting, Convention and January Statewide Meeting in Stockton, CA.",
     featured: false,
   },
 ];
@@ -258,7 +258,7 @@ export default function HomePage() {
               Upcoming Events
             </p>
             <h2 className="font-spartan font-extrabold text-cwa-dark text-4xl lg:text-5xl leading-tight">
-              Join Us in 2025-2026
+              Upcoming Events
             </h2>
           </div>
           <Button href="/events" variant="outline">
@@ -304,7 +304,7 @@ export default function HomePage() {
             Ready to Make a Difference for California Agriculture?
           </h2>
           <p className="text-white/80 text-lg leading-relaxed mb-8 font-sans">
-            Whether you're a farmer, rancher, consumer, or simply someone who believes in a thriving California agriculture, CWA has a place for you. Join 1,500+ members across 19 chapters statewide.
+            Whether you are a farmer, rancher, consumer, or simply someone who believes in a thriving California agriculture, CWA has a place for you. Join 1,500+ members across 19 chapters statewide.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button href="/membership" variant="primary" size="lg">

@@ -57,9 +57,8 @@ export default function ContactPage() {
   return (
     <>
       <Hero
-        subtitle="Get in Touch"
-        title="We'd Love to Hear From You"
-        description="Whether you have a question about membership, events, chapters, or advocacy, our team is here to help. Reach out anytime."
+        subtitle="Contact"
+        title="Contact"
         compact
       />
 
@@ -167,7 +166,7 @@ export default function ContactPage() {
             Ready to Join CWA?
           </h2>
           <p className="text-white/80 text-base leading-relaxed mb-6 font-sans">
-            Membership is open to everyone who believes in California agriculture. Student memberships start at just $26.50/year.
+            Membership is open to everyone who believes in California agriculture. Student memberships start at $20/year.
           </p>
           <a
             href="/membership"

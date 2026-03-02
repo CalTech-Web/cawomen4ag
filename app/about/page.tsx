@@ -56,9 +56,8 @@ export default function AboutPage() {
   return (
     <>
       <Hero
-        subtitle="Our Story"
-        title="50 Years of Empowering California Agriculture"
-        description="Founded in 1975 in the Coachella Valley, California Women For Agriculture has grown into the most active all-volunteer agricultural organization in California, with 19 chapters spanning the entire state."
+        subtitle="About Us"
+        title="About Us"
         compact
       />
 
@@ -68,10 +67,10 @@ export default function AboutPage() {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
               <Image
-                src="/images/CWA-50th.png.webp"
+                src="/images/cwa-logo.webp"
                 alt="CWA 50th Anniversary"
                 fill
-                className="object-cover"
+                className="object-contain p-4"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>

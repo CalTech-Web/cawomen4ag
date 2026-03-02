@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const programLinks = [
   { href: "/programs#advocacy", label: "Legislative Advocacy" },
@@ -23,14 +24,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-cwa-gold rounded-full flex items-center justify-center flex-shrink-0">
-                <span className="text-cwa-dark font-spartan font-bold text-sm">CWA</span>
-              </div>
-              <div>
-                <p className="font-spartan font-bold text-white text-sm leading-tight">California Women</p>
-                <p className="font-spartan font-bold text-cwa-gold text-sm leading-tight">For Agriculture</p>
-              </div>
+            <div className="mb-4">
+              <Link href="/">
+                <Image
+                  src="/images/cwa-logo.webp"
+                  alt="California Women For Agriculture"
+                  width={80}
+                  height={80}
+                  className="object-contain"
+                />
+              </Link>
             </div>
             <p className="text-white/70 text-sm leading-relaxed mb-5">
               Empowering California Women for Agriculture since 1975. A 501(c)(5) nonprofit uniting women in and for agriculture across the Golden State.
