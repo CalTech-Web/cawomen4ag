@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-cwa-purple: #4F376C;
+  --color-cwa-green: #5B7B41;
+  --color-cwa-gold: #FFC000;
+  --color-cwa-blue: #6EC1E4;
+  --color-cwa-dark: #243032;
+  --font-spartan: var(--font-league-spartan);
+  --font-sans: var(--font-source-sans);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: #1a1a1a;
+  font-family: var(--font-source-sans), Inter, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-league-spartan), sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Remove default dark mode that conflicts with our design */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #1a1a1a;
+  }
+}
