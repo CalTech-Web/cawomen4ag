@@ -1,3 +1,5 @@
+import CountUp from "./CountUp";
+
 interface Stat {
   value: string;
   label: string;
@@ -15,7 +17,7 @@ export default function StatsBar({ stats }: StatsBarProps) {
           {stats.map((stat, i) => (
             <div key={i} className="text-center">
               <p className="font-spartan font-extrabold text-3xl sm:text-4xl lg:text-5xl text-cwa-gold leading-none mb-2">
-                {stat.value}
+                <CountUp value={stat.value} />
               </p>
               <p className="font-spartan font-semibold text-white text-sm sm:text-base uppercase tracking-wide">
                 {stat.label}
