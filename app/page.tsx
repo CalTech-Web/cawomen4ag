@@ -282,15 +282,20 @@ export default function HomePage() {
             Supported by Farm Credit for 20+ Years
           </h2>
         </div>
-        <div className="flex flex-wrap justify-center gap-4">
-          {sponsors.map((sponsor, i) => (
-            <div
-              key={i}
-              className="bg-white border border-gray-200 rounded-lg px-6 py-4 shadow-sm hover:shadow-md transition-shadow"
-            >
-              <p className="font-spartan font-semibold text-cwa-dark text-sm text-center">{sponsor}</p>
-            </div>
-          ))}
+        <div className="relative overflow-hidden">
+          {/* Fade edges */}
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none" />
+          <div className="animate-marquee gap-5">
+            {[...sponsors, ...sponsors].map((sponsor, i) => (
+              <div
+                key={i}
+                className="bg-white border border-gray-200 rounded-lg px-7 py-4 shadow-sm flex-shrink-0 mx-2"
+              >
+                <p className="font-spartan font-semibold text-cwa-dark text-sm whitespace-nowrap">{sponsor}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </SectionWrapper>
 
