@@ -37,8 +37,9 @@ export default function Hero({
 
       {/* Decorative shapes */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-cwa-gold/10 blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-cwa-blue/10 blur-3xl" />
+        <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-cwa-gold/10 blur-3xl animate-blob-1" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-cwa-blue/10 blur-3xl animate-blob-2" />
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full bg-cwa-green/10 blur-3xl animate-blob-3" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
