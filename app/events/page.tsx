@@ -1,51 +1,44 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Hero from "@/components/Hero";
 import SectionWrapper from "@/components/SectionWrapper";
 import EventCard from "@/components/EventCard";
 import Button from "@/components/Button";
+import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Events",
   description:
-    "Join California Women For Agriculture at upcoming events including the AG Booster BBQ, 50th Anniversary Golden Weekend, annual convention, and May Legislative Days.",
+    "Join California Women For Agriculture at upcoming events including the March Statewide Meeting in Carpinteria, May Legislative Days, and more.",
 };
 
 const events = [
   {
-    title: "September SWM and Ag Booster BBQ Fundraiser, Central District",
-    date: "September 2025",
-    location: "Central District",
+    title: "March Statewide Meeting: Rooted in the Valley",
+    date: "March 6-8, 2026",
+    location: "Carpinteria, CA",
     description:
-      "CWA's September Statewide Meeting and the annual Ag Booster BBQ Fundraiser hosted by the Central District.",
-    featured: false,
+      "From Mountain Farms to Coastal Fields. Tours, lunch, dinner, and SWM hosted by the Carpinteria/Santa Barbara Chapter.",
+    featured: true,
     category: "Meeting",
   },
   {
-    title: "November SWM and 50th Anniversary, La Quinta, CA Southern District",
-    date: "November 2025",
-    location: "La Quinta, CA",
+    title: "May Legislative Days",
+    date: "May 4-5, 2026",
+    location: "Sacramento, CA",
     description:
-      "CWA's November Statewide Meeting and 50th Anniversary celebration hosted by the Southern District in La Quinta, CA.",
-    featured: true,
-    category: "Anniversary",
+      "CWA's annual two-day legislative event in Sacramento, meeting directly with state lawmakers to advocate for California agriculture. Includes 10 scholarship presentations.",
+    featured: false,
+    category: "Advocacy",
   },
   {
-    title: "AAW 50th Annual Convention, La Quinta",
-    date: "La Quinta, CA",
-    location: "La Quinta, CA",
+    title: "September SWM and Ag Booster BBQ Fundraiser",
+    date: "September 2026",
+    location: "TBD",
     description:
-      "The American Agri Women 50th Annual Convention in La Quinta.",
+      "CWA's September Statewide Meeting and the annual Ag Booster BBQ Fundraiser. Location and details to be announced.",
     featured: false,
-    category: "Convention",
-  },
-  {
-    title: "CWA 2026 Annual Meeting, Convention and January SWM, Stockton, CA",
-    date: "January 2026",
-    location: "Stockton, CA",
-    description:
-      "CWA's 2026 Annual Meeting, Convention and January Statewide Meeting held in Stockton, CA.",
-    featured: false,
-    category: "Convention",
+    category: "Meeting",
   },
 ];
 
@@ -66,8 +59,78 @@ export default function EventsPage() {
         compact
       />
 
-      {/* Events Grid */}
+      {/* Featured Event: March SWM */}
       <SectionWrapper bg="white" py="lg">
+        <FadeIn>
+          <div className="rounded-2xl border-2 border-cwa-gold bg-white overflow-hidden shadow-lg">
+            <div className="bg-cwa-gold px-6 py-3">
+              <span className="font-heading font-semibold text-cwa-dark text-sm uppercase tracking-widest">
+                Featured Event
+              </span>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+              <div className="p-8 lg:p-10">
+                <p className="font-sans font-semibold text-cwa-purple text-xs uppercase tracking-widest mb-3">
+                  March 6-8, 2026
+                </p>
+                <h2 className="font-heading font-semibold text-cwa-dark text-3xl leading-tight mb-2">
+                  Rooted in the Valley
+                </h2>
+                <p className="font-heading text-cwa-dark/70 text-lg italic mb-6">
+                  From Mountain Farms to Coastal Fields
+                </p>
+
+                <div className="space-y-4 mb-8">
+                  <div>
+                    <h3 className="font-sans font-semibold text-cwa-dark text-sm mb-2">Schedule</h3>
+                    <ul className="space-y-1.5 text-gray-600 text-sm font-sans">
+                      <li><strong>3/6:</strong> Welcome Social & Swag Pick Up (No Host)</li>
+                      <li><strong>3/7:</strong> Tours & Lunch ($25) | Dinner ($50) | Executive Meeting</li>
+                      <li><strong>3/8:</strong> SWM In Person ($50) | SWM Virtual/Zoom ($15)</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="font-sans font-semibold text-cwa-dark text-sm mb-2">Hotel</h3>
+                    <p className="text-gray-600 text-sm font-sans">
+                      Holiday Inn Express & Suites<br />
+                      5606 Carpinteria Avenue, Carpinteria, CA 93013<br />
+                      (805) 566-9499
+                    </p>
+                    <p className="text-gray-500 text-sm font-sans mt-1">
+                      $169.99/night (1 King or 2 Queens)<br />
+                      Reserve by phone: 888-409-8300, Group Block ID: 315174
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="font-sans font-semibold text-cwa-dark text-sm mb-2">Host Chapter</h3>
+                    <p className="text-gray-600 text-sm font-sans">
+                      Carpinteria/Santa Barbara Chapter<br />
+                      <a href="mailto:carpinteriacwa@gmail.com" className="text-cwa-purple hover:underline">carpinteriacwa@gmail.com</a> | (805) 331-5377
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="relative bg-cwa-cream flex items-center justify-center p-6 lg:p-8">
+                <Image
+                  src="/images/CWA-State-Meeting-Registration-Flyer.jpg.webp"
+                  alt="March 2026 Statewide Meeting Registration Flyer"
+                  width={500}
+                  height={700}
+                  className="rounded-lg shadow-md w-full max-w-sm h-auto"
+                />
+              </div>
+            </div>
+          </div>
+        </FadeIn>
+      </SectionWrapper>
+
+      {/* All Events */}
+      <SectionWrapper bg="light" py="lg">
+        <div className="mb-8">
+          <h2 className="font-heading font-semibold text-cwa-dark text-3xl">All Upcoming Events</h2>
+        </div>
         <div className="space-y-6">
           {events.map((event, i) => (
             <div
@@ -78,13 +141,6 @@ export default function EventsPage() {
                   : "border-gray-200 shadow-sm"
               } bg-white overflow-hidden hover:shadow-lg transition-shadow duration-200`}
             >
-              {event.featured && (
-                <div className="bg-cwa-gold px-6 py-2">
-                  <span className="font-heading font-semibold text-cwa-dark text-xs uppercase tracking-widest">
-                    50th Anniversary Featured Event
-                  </span>
-                </div>
-              )}
               <div className="p-7">
                 <div className="flex flex-col sm:flex-row sm:items-start gap-4">
                   <div className="flex-1">

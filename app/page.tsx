@@ -7,6 +7,7 @@ import EventCard from "@/components/EventCard";
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
 import FadeIn from "@/components/FadeIn";
+import LightboxImage from "@/components/LightboxImage";
 
 const stats = [
   { value: "50+", label: "Years of Service" },
@@ -108,28 +109,28 @@ const testimonials = [
 
 const upcomingEvents = [
   {
-    title: "September SWM and Ag Booster BBQ Fundraiser, Central District",
-    date: "September 2025",
-    location: "Central District",
-    description: "CWA's September Statewide Meeting and the annual Ag Booster BBQ Fundraiser hosted by the Central District.",
-    featured: false,
+    title: "March Statewide Meeting: Rooted in the Valley",
+    date: "March 6-8, 2026",
+    location: "Carpinteria, CA",
+    description: "From Mountain Farms to Coastal Fields. Tours, lunch, dinner, and SWM hosted by the Carpinteria/Santa Barbara Chapter at Holiday Inn Express & Suites.",
+    featured: true,
     category: "Meeting",
   },
   {
-    title: "50th Anniversary Golden Weekend Celebration",
-    date: "November 7-9, 2025",
-    location: "Embassy Suites, La Quinta, CA",
-    description: "CWA's November Statewide Meeting and 50th Anniversary celebration hosted by the Southern District.",
-    featured: true,
-    category: "Anniversary",
+    title: "May Legislative Days",
+    date: "May 4-5, 2026",
+    location: "Sacramento, CA",
+    description: "CWA's annual two-day legislative event in Sacramento, meeting directly with state lawmakers to advocate for California agriculture. Includes 10 scholarship presentations.",
+    featured: false,
+    category: "Advocacy",
   },
   {
-    title: "CWA 2026 Annual Meeting, Convention and January SWM",
-    date: "January 9-11, 2026",
-    location: "Manteca, CA",
-    description: "CWA's 2026 Annual Meeting, Convention and January Statewide Meeting.",
+    title: "September SWM and Ag Booster BBQ Fundraiser",
+    date: "September 2026",
+    location: "TBD",
+    description: "CWA's September Statewide Meeting and the annual Ag Booster BBQ Fundraiser. Location and details to be announced.",
     featured: false,
-    category: "Convention",
+    category: "Meeting",
   },
 ];
 
@@ -150,7 +151,7 @@ export default function HomePage() {
         description="California Women For Agriculture is a non-partisan, statewide organization uniting women in and for agriculture to advocate for the industry, educate the public, and invest in the next generation of agricultural leaders."
         primaryCta={{ label: "Join CWA", href: "/membership" }}
         secondaryCta={{ label: "Our Story", href: "/about" }}
-        bgImage="/images/pexels-zen-chung-5529007.jpg"
+        bgImage="/images/vineyard-hero.jpg"
       />
 
       <StatsBar stats={stats} />
@@ -178,12 +179,12 @@ export default function HomePage() {
           </FadeIn>
 
           <FadeIn direction="right">
-            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <Image
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <LightboxImage
                 src="/images/cawomen-join-us-1024x644.jpg"
                 alt="California Women For Agriculture members"
-                fill
-                className="object-cover !relative"
+                containerClassName="relative aspect-[1024/644] rounded-2xl overflow-hidden"
+                className="object-contain"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
@@ -246,12 +247,12 @@ export default function HomePage() {
       <SectionWrapper bg="white" py="lg">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <FadeIn direction="left">
-            <div className="rounded-2xl overflow-hidden aspect-[3/2] bg-cwa-cream">
+            <div className="rounded-2xl overflow-hidden aspect-[3/2]">
               <Image
-                src="/images/california-map.png"
-                alt="CWA Chapters across California"
+                src="/images/pexels-grape-things-3840331.jpg"
+                alt="California agriculture vineyard"
                 fill
-                className="object-contain p-4 !relative"
+                className="object-cover !relative"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
@@ -321,7 +322,7 @@ export default function HomePage() {
       <div className="relative overflow-hidden bg-cwa-dark">
         <div className="absolute inset-0">
           <Image
-            src="/images/pexels-markus-spiske-1268101.jpg.webp"
+            src="/images/pexels-pixabay-461960.jpg"
             alt=""
             fill
             className="object-cover opacity-20"
