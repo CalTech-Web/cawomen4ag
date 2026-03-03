@@ -135,10 +135,10 @@ export default function ChaptersPage() {
       <SectionWrapper bg="white" py="lg">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="font-spartan font-semibold text-cwa-green text-sm uppercase tracking-widest mb-3">
+            <p className="font-sans font-semibold text-cwa-green text-[11px] uppercase tracking-[0.2em] mb-3">
               Statewide Reach
             </p>
-            <h2 className="font-spartan font-extrabold text-cwa-dark text-4xl lg:text-5xl leading-tight mb-6">
+            <h2 className="font-heading font-semibold text-cwa-dark text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight mb-6">
               Agriculture Runs the Length of California
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed mb-4 font-sans">
@@ -155,20 +155,20 @@ export default function ChaptersPage() {
                 { value: "Statewide", label: "Geographic Coverage" },
               ].map((stat, i) => (
                 <div key={i} className="bg-cwa-purple/5 rounded-xl p-4 text-center border border-cwa-purple/10">
-                  <p className="font-spartan font-extrabold text-cwa-purple text-2xl">{stat.value}</p>
+                  <p className="font-heading font-bold text-cwa-purple text-2xl">{stat.value}</p>
                   <p className="text-gray-600 text-xs font-sans mt-1">{stat.label}</p>
                 </div>
               ))}
             </div>
           </div>
           <div className="bg-cwa-green/5 rounded-2xl p-8 border border-cwa-green/20">
-            <h3 className="font-spartan font-bold text-cwa-dark text-xl mb-6">Chapters by Region</h3>
+            <h3 className="font-heading font-semibold text-cwa-dark text-xl mb-6">Chapters by Region</h3>
             <div className="space-y-4">
               {regions.map((region) => {
                 const regionChapters = chapters.filter((c) => c.region === region);
                 return (
                   <div key={region}>
-                    <span className={`inline-block text-xs font-spartan font-bold uppercase tracking-wide px-3 py-1 rounded-full border mb-2 ${regionColors[region]}`}>
+                    <span className={`inline-block text-xs font-sans font-semibold uppercase tracking-wide px-3 py-1 rounded-full border mb-2 ${regionColors[region]}`}>
                       {region} ({regionChapters.length})
                     </span>
                     <p className="text-gray-600 text-sm font-sans">
@@ -185,10 +185,10 @@ export default function ChaptersPage() {
       {/* All Chapters */}
       <SectionWrapper bg="light" py="lg">
         <div className="text-center mb-12">
-          <p className="font-spartan font-semibold text-cwa-green text-sm uppercase tracking-widest mb-3">
+          <p className="font-sans font-semibold text-cwa-green text-[11px] uppercase tracking-[0.2em] mb-3">
             Find Your Chapter
           </p>
-          <h2 className="font-spartan font-extrabold text-cwa-dark text-4xl lg:text-5xl leading-tight">
+          <h2 className="font-heading font-semibold text-cwa-dark text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight">
             All CWA Chapters
           </h2>
         </div>
@@ -199,8 +199,8 @@ export default function ChaptersPage() {
               className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-200"
             >
               <div className="flex items-start justify-between gap-3 mb-3">
-                <h3 className="font-spartan font-bold text-cwa-dark text-lg">{chapter.name}</h3>
-                <span className={`flex-shrink-0 text-xs font-spartan font-semibold uppercase tracking-wide px-2.5 py-1 rounded-full border ${regionColors[chapter.region]}`}>
+                <h3 className="font-heading font-semibold text-cwa-dark text-lg">{chapter.name}</h3>
+                <span className={`flex-shrink-0 text-xs font-sans font-semibold uppercase tracking-wide px-2.5 py-1 rounded-full border ${regionColors[chapter.region]}`}>
                   {chapter.region}
                 </span>
               </div>
@@ -236,7 +236,7 @@ export default function ChaptersPage() {
       {/* Start a Chapter CTA */}
       <SectionWrapper bg="dark" py="md">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="font-spartan font-extrabold text-white text-3xl lg:text-4xl mb-4">
+          <h2 className="font-heading font-semibold text-white text-3xl sm:text-4xl leading-tight mb-4">
             Don't See Your Area?
           </h2>
           <p className="text-white/80 text-lg leading-relaxed mb-6 font-sans">

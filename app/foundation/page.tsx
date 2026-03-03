@@ -24,10 +24,10 @@ export default function FoundationPage() {
       <SectionWrapper bg="white" py="lg">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="font-spartan font-semibold text-cwa-green text-sm uppercase tracking-widest mb-3">
+            <p className="font-sans font-semibold text-cwa-green text-[11px] uppercase tracking-[0.2em] mb-3">
               A Bold New Chapter
             </p>
-            <h2 className="font-spartan font-extrabold text-cwa-dark text-4xl lg:text-5xl leading-tight mb-6">
+            <h2 className="font-heading font-semibold text-cwa-dark text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight mb-6">
               The CWA Foundation
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed mb-4 font-sans">
@@ -60,10 +60,10 @@ export default function FoundationPage() {
       {/* Programs */}
       <SectionWrapper bg="light" py="lg">
         <div className="text-center mb-12">
-          <p className="font-spartan font-semibold text-cwa-green text-sm uppercase tracking-widest mb-3">
+          <p className="font-sans font-semibold text-cwa-green text-[11px] uppercase tracking-[0.2em] mb-3">
             Foundation Programs
           </p>
-          <h2 className="font-spartan font-extrabold text-cwa-dark text-4xl lg:text-5xl leading-tight">
+          <h2 className="font-heading font-semibold text-cwa-dark text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight">
             How We Invest in the Future
           </h2>
         </div>
@@ -142,7 +142,7 @@ export default function FoundationPage() {
               <div className="w-14 h-14 bg-cwa-purple/10 text-cwa-purple rounded-2xl flex items-center justify-center mb-5">
                 {program.icon}
               </div>
-              <h3 className="font-spartan font-bold text-cwa-dark text-xl mb-3">{program.title}</h3>
+              <h3 className="font-heading font-semibold text-cwa-dark text-xl mb-3">{program.title}</h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-5 font-sans">{program.description}</p>
               <ul className="space-y-2">
                 {program.details.map((detail, j) => (
@@ -162,10 +162,10 @@ export default function FoundationPage() {
       {/* Capitol Advocacy Scholarship */}
       <SectionWrapper bg="purple" py="lg">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="font-spartan font-semibold text-cwa-gold text-sm uppercase tracking-widest mb-4">
+          <p className="font-sans font-semibold text-cwa-gold text-[11px] uppercase tracking-[0.2em] mb-4">
             Featured Scholarship
           </p>
-          <h2 className="font-spartan font-extrabold text-white text-4xl lg:text-5xl leading-tight mb-6">
+          <h2 className="font-heading font-semibold text-white text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight mb-6">
             Capitol Advocacy Scholarship
           </h2>
           <p className="text-white/85 text-xl leading-relaxed mb-4 font-sans">
@@ -181,7 +181,7 @@ export default function FoundationPage() {
               { value: "Sacramento, CA", label: "Location" },
             ].map((stat, i) => (
               <div key={i} className="bg-white/10 rounded-xl p-4 text-center">
-                <p className="font-spartan font-extrabold text-cwa-gold text-2xl">{stat.value}</p>
+                <p className="font-heading font-bold text-cwa-gold text-2xl">{stat.value}</p>
                 <p className="text-white/70 text-sm font-sans mt-1">{stat.label}</p>
               </div>
             ))}
@@ -195,7 +195,7 @@ export default function FoundationPage() {
       {/* Support the Foundation */}
       <SectionWrapper bg="dark" py="lg">
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="font-spartan font-extrabold text-white text-4xl lg:text-5xl leading-tight mb-6">
+          <h2 className="font-heading font-semibold text-white text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight mb-6">
             Support the CWA Foundation
           </h2>
           <p className="text-white/80 text-lg leading-relaxed mb-8 font-sans">

@@ -6,8 +6,9 @@
   --color-cwa-gold: #FFC000;
   --color-cwa-blue: #6EC1E4;
   --color-cwa-dark: #243032;
-  --font-spartan: var(--font-league-spartan);
-  --font-sans: var(--font-source-sans);
+  --color-cwa-cream: #FAF8F5;
+  --font-heading: var(--font-fraunces);
+  --font-sans: var(--font-jakarta);
 }
 
 *,
@@ -22,68 +23,37 @@ html {
 
 body {
   background: #ffffff;
-  color: #1a1a1a;
-  font-family: var(--font-source-sans), Inter, system-ui, sans-serif;
+  color: #2D2D2D;
+  font-family: var(--font-jakarta), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-league-spartan), sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.01em;
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
-/* Remove default dark mode that conflicts with our design */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #ffffff;
-    --foreground: #1a1a1a;
+    --foreground: #2D2D2D;
   }
 }
 
-/* Sponsor marquee */
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+/* Reveal animation */
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.animate-marquee {
-  animation: marquee 32s linear infinite;
-  display: flex;
-  width: max-content;
-}
-
-.animate-marquee:hover {
-  animation-play-state: paused;
-}
-
-/* Hero animated blobs */
-@keyframes blob-float-1 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33%       { transform: translate(30px, -30px) scale(1.06); }
-  66%       { transform: translate(-20px, 20px) scale(0.94); }
-}
-
-@keyframes blob-float-2 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33%       { transform: translate(-25px, 25px) scale(0.93); }
-  66%       { transform: translate(20px, -18px) scale(1.08); }
-}
-
-@keyframes blob-float-3 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50%       { transform: translate(15px, -20px) scale(1.05); }
-}
-
-.animate-blob-1 {
-  animation: blob-float-1 12s ease-in-out infinite;
-}
-
-.animate-blob-2 {
-  animation: blob-float-2 15s ease-in-out infinite;
-}
-
-.animate-blob-3 {
-  animation: blob-float-3 10s ease-in-out infinite;
+.animate-reveal {
+  animation: reveal-up 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }

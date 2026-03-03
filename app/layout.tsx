@@ -1,20 +1,18 @@
 import type { Metadata } from "next";
-import { League_Spartan, Source_Sans_3 } from "next/font/google";
+import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const leagueSpartan = League_Spartan({
-  variable: "--font-league-spartan",
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
 });
 
-const sourceSans = Source_Sans_3({
-  variable: "--font-source-sans",
+const plusJakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin"],
-  weight: ["300", "400", "600", "700"],
   display: "swap",
 });
 
@@ -64,7 +62,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${leagueSpartan.variable} ${sourceSans.variable}`}>
+    <html lang="en" className={`${fraunces.variable} ${plusJakarta.variable}`}>
       <body className="antialiased bg-white text-gray-900">
         <Header />
         <main>{children}</main>

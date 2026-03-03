@@ -13,17 +13,17 @@ interface ButtonProps {
 
 const variantClasses = {
   primary:
-    "bg-cwa-gold hover:bg-yellow-400 text-cwa-dark font-spartan font-bold shadow-md hover:shadow-lg",
+    "bg-cwa-gold hover:bg-cwa-gold/90 text-cwa-dark font-sans font-semibold",
   secondary:
-    "bg-cwa-purple hover:bg-purple-900 text-white font-spartan font-bold shadow-md hover:shadow-lg",
+    "bg-cwa-purple hover:bg-cwa-purple/90 text-white font-sans font-semibold",
   outline:
-    "border-2 border-cwa-gold text-cwa-gold hover:bg-cwa-gold hover:text-cwa-dark font-spartan font-bold",
+    "border border-cwa-gold text-cwa-gold hover:bg-cwa-gold/10 font-sans font-semibold",
 };
 
 const sizeClasses = {
-  sm: "px-4 py-2 text-sm",
-  md: "px-6 py-3 text-base",
-  lg: "px-8 py-4 text-lg",
+  sm: "px-5 py-2.5 text-sm rounded-full",
+  md: "px-7 py-3 text-[15px] rounded-full",
+  lg: "px-9 py-4 text-base rounded-full",
 };
 
 export default function Button({
@@ -36,7 +36,7 @@ export default function Button({
   type = "button",
   external = false,
 }: ButtonProps) {
-  const classes = `inline-flex items-center justify-center rounded-md transition-all duration-150 ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+  const classes = `inline-flex items-center justify-center transition-all duration-200 ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
   if (href) {
     if (external) {

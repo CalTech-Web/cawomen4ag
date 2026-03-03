@@ -8,16 +8,16 @@ interface SectionWrapperProps {
 
 const bgClasses = {
   white: "bg-white",
-  light: "bg-gray-50",
+  light: "bg-cwa-cream",
   purple: "bg-cwa-purple text-white",
   dark: "bg-cwa-dark text-white",
   green: "bg-cwa-green text-white",
 };
 
 const pyClasses = {
-  sm: "py-10",
-  md: "py-16",
-  lg: "py-24",
+  sm: "py-12 sm:py-16",
+  md: "py-16 sm:py-20",
+  lg: "py-20 sm:py-28 lg:py-32",
 };
 
 export default function SectionWrapper({

@@ -133,10 +133,15 @@ CWA's mission is to promote and develop the interest of California women involve
 ### 6. Membership
 - Open to anyone who believes in the mission
 - Diverse membership: farmers, ranchers, bankers, lawyers, accountants, marketing professionals, consumers
-- Student membership: $26.50/year
-- Regular membership: $41.50/year
-- Silver Donor Level: $501 to $1,000
-- Platinum Donor Level: $2,000+
+- Student membership: $20/year
+- Regular membership: $40/year
+- Donor: Minimum $100
+- Bronze: $250+
+- Silver Donor: $501 to $1,000
+- Gold Donor: $1,000 to $2,000
+- Platinum Donor: $2,000 to $4,000
+- Titanium Donor: $5,000+
+- Donor Application PDF: https://cawomen4ag.com/wp-content/uploads/2025/03/Introduction-to-web-donor-application.pdf
 - URL: `/membership/`
 
 ---
@@ -145,9 +150,9 @@ CWA's mission is to promote and develop the interest of California women involve
 
 | Metric | Value |
 |---|---|
-| Founded | 1975 (50 years of service as of 2025-2026) |
+| Founded | 1975 (50+ years of service) |
 | Members | 1,500+ |
-| Chapters | 19-20 statewide |
+| Chapters | 19 statewide (5 districts) |
 | Geographic reach | Butte County to the Mexican border |
 | AgVenture program age | 14 years |
 | AgVenture class size | 12 participants per year |
@@ -158,27 +163,54 @@ CWA's mission is to promote and develop the interest of California women involve
 
 ---
 
-## Chapters (19-20 Total)
+## Chapters (19 Total, by District)
 
+### Northern District
 1. Lake County
 2. North Bay
 3. North Valley (P.O. Box 249, Durham, CA 95938; northvalleycwa@gmail.com)
 4. Sacramento Valley
-5. Merced
-6. San Joaquin
-7. Stanislaus
-8. Central Valley (P.O. Box 1761, Clovis, CA 93612; CWACentralvalley@gmail.com)
-9. Kern
-10. Tulare-Kings
-11. Carpinteria/Santa Barbara
-12. Salinas Valley
-13. San Luis Obispo County
-14. Santa Maria
-15. Ventura County
-16. Coachella Valley
-17. Imperial Valley
-18. Los Angeles
-19. Palo Verde
+
+### North Central District
+5. San Joaquin
+6. Stanislaus
+
+### Central Valley District
+7. Central Valley (P.O. Box 1761, Clovis, CA 93612; CWACentralvalley@gmail.com)
+8. Kern County
+9. Tulare-Kings
+
+### Coastal District
+10. Carpinteria/Santa Barbara (carpinteriacwa@gmail.com, (805) 331-5377, IG: @carpinteriacwa)
+11. Salinas Valley
+12. San Luis Obispo County
+13. Santa Maria
+14. Ventura County
+
+### Southern District
+15. Coachella Valley
+16. Imperial Valley
+17. Los Angeles
+18. Palo Verde
+
+---
+
+## About Page Content (Live Site)
+
+### CWA Foundation (CWAF) Announcement
+"We're thrilled to announce the launch of the California Women for Agriculture Foundation (CWAF), a bold new chapter in our 50-year legacy of championing California agriculture!"
+
+### State Executive Board Members (from About page images/captions)
+- Board members represent chapters: San Joaquin, Central Valley, North Valley, Sacramento Valley, Santa Maria, Northern Valley
+- Photos available on live site
+
+### District Directors
+- North Central District
+- Central Valley District
+- Coastal District (Salinas Valley, Santa Maria chapters)
+
+### The Compass Newsletter Archive (published on About page)
+Issues available: March 2024, January 2024, November 2023, September 2023, May 2023, March 2023, January 2023, November 2022, September 2022, May 2022, March 2022, January 2022, plus CWA Annual Report
 
 ---
 
@@ -234,48 +266,93 @@ Partner organization: American Agri Women (federal advocacy coalition)
 
 | Event | Date | Location |
 |---|---|---|
-| 48th Annual AG Booster BBQ | September 7, 2025 | Fresno, CA |
-| September Statewide Meeting (in-person + virtual) | September 2025 | TBD |
-| 50th Anniversary Golden Weekend Celebration | November 7-9, 2025 | Embassy Suites, La Quinta, CA |
-| Convention/Annual Meeting: "Agriculture: California's Gold" | January 9-11, 2026 | Manteca, CA |
-| May Legislative Days | May 4-5 | Sacramento, CA |
+| March 2026 Statewide Meeting | March 6-8, 2026 | Carpinteria, CA |
+| September SWM and Ag Booster BBQ Fundraiser | September 2025 | Central District |
+| November SWM and 50th Anniversary | November 2025 | La Quinta, CA (Southern District) |
+| AAW 50th Annual Convention | November 2025 | La Quinta, CA |
+| CWA 2026 Annual Meeting, Convention and January SWM | January 9-11, 2026 | Stockton, CA (North Central District) |
+| May Legislative Days | May 4-5, 2026 | Sacramento, CA |
+
+### March 2026 SWM Details (Carpinteria)
+- Theme: "Rooted in the Valley: From Mountain Farms to Coastal Fields"
+- 3/6: Welcome Social & Swag Pick Up (No Host)
+- 3/7: Tours & Lunch ($25), Dinner ($50), Executive Meeting
+- 3/8: SWM In Person ($50), SWM Virtual/Zoom ($15)
+- Hotel: Holiday Inn Express & Suites, 5606 Carpinteria Avenue, Carpinteria, CA 93013, (805) 566-9499
+- Room rate: $169.99 (1 King or 2 Queens), Check In 3:00 PM, Check Out 12:00 PM
+- Reserve by phone: 888-409-8300, Group Block ID: 315174 (deadline 2/13/26)
+- Host chapter contact: carpinteriacwa@gmail.com, (805) 331-5377, IG: @carpinteriacwa
 
 ---
 
-## Site Structure / Navigation
+## Site Structure / Navigation (Live WordPress Site)
 
 ### Primary Navigation
-- Home (`/`)
 - About Us (`/about-us/`)
-- Membership (`/membership/`)
 - Events (`/events/`)
 - Chapters (`/chapters/`)
+  - Chapter Highlights (dropdown with PDFs/docs for Ventura County, Sacramento Valley, Lake County, Central Valley, Stanislaus County, Palo Verde)
 - Media & Resources (`/resources/`)
+  - Statewide Meeting Information (`/statewide-meeting-information/`)
+- CWA Foundation (`/cwa-foundation/`)
+  - Scholarship Opportunity (`/scholarship-opportunity/`)
+  - Sponsors (`/donors/`)
+  - Download Donor Application (PDF link)
+- Membership (`/membership/`)
+  - Members Only (`/members-only/`)
 - Contact (`/contact/`)
-- Members Only (`/members-only/`)
 
 ### CTAs
 - Join CWA -> (`/membership/`)
 - Contact Us -> (`/contact/`)
 - Phone: (916) 441-2910
 
-### Footer Links: Programs
-- Legislative Advocacy (`/advocacy/`)
-- Agricultural Education (`/education/`)
-- Scholarships (`/scholarships/`)
-- CWA Foundation (`/foundation/`)
-- The Compass Newsletter (`/resources/`)
+### Footer (Live Site)
+- Contact Info: 1521 I Street, Sacramento, CA 95814
+- Email: statecwa@gmail.com
+- Phone: (916) 441-2910
+- Follow Us On Facebook
+- Follow Us On Twitter
+- Copyright: 2026 California Women for Agriculture | All Rights Reserved.
 
-### Footer Links: Organization
-- About Us (`/about-us/`)
-- Chapters (`/chapters/`)
-- Events (`/events/`)
-- Media & Resources (`/resources/`)
-- Contact (`/contact/`)
+### Additional Pages on Live Site
+- Statewide Meeting Information (`/statewide-meeting-information/`)
+- CWA Foundation (`/cwa-foundation/`)
+- Scholarship Opportunity (`/scholarship-opportunity/`)
+- Sponsors/Donors (`/donors/`)
+- Members Only (`/members-only/`)
 
 ### Legal Pages
 - Privacy Policy (`/privacy-policy/`)
 - Terms of Service (`/terms-of-service/`)
+
+---
+
+## Live Homepage Content (WordPress)
+
+### Hero Section
+- Large background image (vineyard/agriculture)
+- H1: "California Women For Agriculture"
+- Body: "California Women for Agriculture (CWA) was formed in 1975, in the Coachella Valley. The name was chosen to develop a cross section of members. In fact, the nucleus of the first chapter was made up of consumers, as well as farmers and ranchers. Today our membership is as diverse as the industry we represent; bankers, lawyers, accountants, marketing professionals, consumers, AND farmers and ranchers."
+
+### Homepage Sections
+- Our Beginning (founding story)
+- Find A Local Chapter
+- Membership
+- Upcoming Events
+- 2026 March Statewide Meeting (with flyer download)
+- Follow Us (social media)
+- Image gallery featuring: agriculture scenes, pexels stock photos, member photos
+
+### Homepage Image Gallery (featured photos)
+- pexels-zen-chung-5529007.jpg (hero background)
+- pexels-greta-hoffman-7728639 (women in agriculture)
+- pexels-grape-things-3840331 (vineyards)
+- pexels-roman-odintsov-6342169 (agriculture)
+- tim-mossholder-fqXWl0vD5JU-unsplash (farming)
+- pexels-anna-shvets-5231085 (community)
+- pexels-rodnae-productions-7782158 (agriculture workers)
+- farmers-661784_640 (farming scene)
 
 ---
 
@@ -311,9 +388,10 @@ Partner organization: American Agri Women (federal advocacy coalition)
 
 | Platform | URL |
 |---|---|
-| LinkedIn | https://www.linkedin.com/company/california-women-for-agriculture |
+| Facebook | https://www.facebook.com (generic link on live site) |
 | Twitter/X | https://twitter.com/women4ag |
-| Facebook | Referenced in footer |
+| LinkedIn | https://www.linkedin.com/company/california-women-for-agriculture |
+| Instagram | @carpinteriacwa (Carpinteria/Santa Barbara chapter) |
 
 ---
 

@@ -35,9 +35,9 @@ export default function FadeIn({
   }, []);
 
   const initialTransform = {
-    up: "translateY(28px)",
-    left: "translateX(-28px)",
-    right: "translateX(28px)",
+    up: "translateY(20px)",
+    left: "translateX(-20px)",
+    right: "translateX(20px)",
     none: "none",
   }[direction];
 
@@ -48,7 +48,7 @@ export default function FadeIn({
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? "none" : initialTransform,
-        transition: `opacity 0.55s ease ${delay}ms, transform 0.55s ease ${delay}ms`,
+        transition: `opacity 0.65s cubic-bezier(0.25, 0.1, 0.25, 1) ${delay}ms, transform 0.65s cubic-bezier(0.25, 0.1, 0.25, 1) ${delay}ms`,
       }}
     >
       {children}

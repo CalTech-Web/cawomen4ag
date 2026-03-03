@@ -80,7 +80,7 @@ export default function EventsPage() {
             >
               {event.featured && (
                 <div className="bg-cwa-gold px-6 py-2">
-                  <span className="font-spartan font-bold text-cwa-dark text-xs uppercase tracking-widest">
+                  <span className="font-heading font-semibold text-cwa-dark text-xs uppercase tracking-widest">
                     50th Anniversary Featured Event
                   </span>
                 </div>
@@ -90,7 +90,7 @@ export default function EventsPage() {
                   <div className="flex-1">
                     <div className="flex flex-wrap items-center gap-3 mb-3">
                       <span
-                        className={`text-xs font-spartan font-bold uppercase tracking-wide px-3 py-1 rounded-full ${
+                        className={`text-xs font-sans font-semibold uppercase tracking-wide px-3 py-1 rounded-full ${
                           categoryColors[event.category] || "bg-gray-100 text-gray-700"
                         }`}
                       >
@@ -100,10 +100,10 @@ export default function EventsPage() {
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
-                        <span className="font-spartan font-semibold text-sm">{event.date}</span>
+                        <span className="font-sans font-semibold text-sm">{event.date}</span>
                       </div>
                     </div>
-                    <h3 className="font-spartan font-bold text-cwa-dark text-2xl leading-snug mb-3">
+                    <h3 className="font-heading font-semibold text-cwa-dark text-2xl leading-snug mb-3">
                       {event.title}
                     </h3>
                     <div className="flex items-center gap-2 mb-4">
@@ -125,7 +125,7 @@ export default function EventsPage() {
       {/* Contact CTA */}
       <SectionWrapper bg="light" py="md">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="font-spartan font-extrabold text-cwa-dark text-3xl mb-4">
+          <h2 className="font-heading font-semibold text-cwa-dark text-3xl mb-4">
             Questions About Events?
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed mb-6 font-sans">

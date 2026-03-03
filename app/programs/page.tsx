@@ -28,10 +28,10 @@ export default function ProgramsPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
               </svg>
             </div>
-            <p className="font-spartan font-semibold text-cwa-purple text-sm uppercase tracking-widest mb-3">
+            <p className="font-sans font-semibold text-cwa-purple text-[11px] uppercase tracking-[0.2em] mb-3">
               Program 01
             </p>
-            <h2 className="font-spartan font-extrabold text-cwa-dark text-4xl lg:text-5xl leading-tight mb-6">
+            <h2 className="font-heading font-semibold text-cwa-dark text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight mb-6">
               Legislative Advocacy
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed mb-4 font-sans">
@@ -56,10 +56,10 @@ export default function ProgramsPage() {
             </div>
           </div>
           <div className="bg-cwa-purple/5 rounded-2xl p-8 border border-cwa-purple/20">
-            <blockquote className="text-cwa-dark text-xl leading-relaxed font-spartan font-medium italic mb-6">
+            <blockquote className="text-cwa-dark text-xl leading-relaxed font-heading font-medium italic mb-6">
               "In the years to come, CWA will continue to help shape decisions that secure our food supply, strengthen rural communities, and build our economies. We know, and we have shown, that when women speak together, the world listens differently."
             </blockquote>
-            <p className="font-spartan font-bold text-cwa-purple">Sharron Zoller</p>
+            <p className="font-heading font-semibold text-cwa-purple">Sharron Zoller</p>
             <p className="text-gray-600 text-sm font-sans">Former State President</p>
           </div>
         </div>
@@ -73,10 +73,10 @@ export default function ProgramsPage() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
             </svg>
           </div>
-          <p className="font-spartan font-semibold text-cwa-green text-sm uppercase tracking-widest mb-3">
+          <p className="font-sans font-semibold text-cwa-green text-[11px] uppercase tracking-[0.2em] mb-3">
             Program 02
           </p>
-          <h2 className="font-spartan font-extrabold text-cwa-dark text-4xl lg:text-5xl leading-tight mb-4">
+          <h2 className="font-heading font-semibold text-cwa-dark text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight mb-4">
             Agricultural Education
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto font-sans">
@@ -111,10 +111,10 @@ export default function ProgramsPage() {
               key={i}
               className={`bg-white rounded-xl p-7 shadow-sm border-t-4 ${program.color} border border-gray-100 hover:shadow-md transition-shadow`}
             >
-              <span className="inline-block bg-cwa-green/10 text-cwa-green text-xs font-semibold font-spartan px-3 py-1 rounded-full mb-4 uppercase tracking-wide">
+              <span className="inline-block bg-cwa-green/10 text-cwa-green text-xs font-semibold font-sans px-3 py-1 rounded-full mb-4 uppercase tracking-wide">
                 {program.badge}
               </span>
-              <h3 className="font-spartan font-bold text-cwa-dark text-xl mb-3">{program.title}</h3>
+              <h3 className="font-heading font-semibold text-cwa-dark text-xl mb-3">{program.title}</h3>
               <p className="text-gray-600 text-sm leading-relaxed font-sans">{program.description}</p>
             </div>
           ))}
@@ -130,10 +130,10 @@ export default function ProgramsPage() {
       <SectionWrapper bg="purple" py="lg" id="scholarships">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="font-spartan font-semibold text-cwa-gold text-sm uppercase tracking-widest mb-3">
+            <p className="font-sans font-semibold text-cwa-gold text-[11px] uppercase tracking-[0.2em] mb-3">
               Program 03
             </p>
-            <h2 className="font-spartan font-extrabold text-white text-4xl lg:text-5xl leading-tight mb-6">
+            <h2 className="font-heading font-semibold text-white text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight mb-6">
               Scholarships
             </h2>
             <p className="text-white/85 text-lg leading-relaxed mb-4 font-sans">
@@ -150,7 +150,7 @@ export default function ProgramsPage() {
                 { value: "$300", label: "Capitol Advocacy Scholarship" },
               ].map((stat, i) => (
                 <div key={i} className="bg-white/10 rounded-xl p-4 text-center">
-                  <p className="font-spartan font-extrabold text-cwa-gold text-2xl">{stat.value}</p>
+                  <p className="font-heading font-bold text-cwa-gold text-2xl">{stat.value}</p>
                   <p className="text-white/70 text-xs font-sans mt-1">{stat.label}</p>
                 </div>
               ))}
@@ -176,7 +176,7 @@ export default function ProgramsPage() {
               },
             ].map((item, i) => (
               <div key={i} className="bg-white/10 rounded-xl p-5">
-                <h3 className="font-spartan font-bold text-white text-base mb-2">{item.title}</h3>
+                <h3 className="font-heading font-semibold text-white text-base mb-2">{item.title}</h3>
                 <p className="text-white/70 text-sm font-sans leading-relaxed">{item.description}</p>
               </div>
             ))}
@@ -192,10 +192,10 @@ export default function ProgramsPage() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
             </svg>
           </div>
-          <p className="font-spartan font-semibold text-cwa-green text-sm uppercase tracking-widest mb-3">
+          <p className="font-sans font-semibold text-cwa-green text-[11px] uppercase tracking-[0.2em] mb-3">
             Program 04
           </p>
-          <h2 className="font-spartan font-extrabold text-cwa-dark text-4xl lg:text-5xl leading-tight mb-6">
+          <h2 className="font-heading font-semibold text-cwa-dark text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight mb-6">
             The Compass Newsletter
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed mb-4 font-sans">
@@ -214,7 +214,7 @@ export default function ProgramsPage() {
             ].map((item, i) => (
               <span
                 key={i}
-                className="bg-cwa-green/10 text-cwa-green border border-cwa-green/30 text-sm font-semibold font-spartan px-4 py-2 rounded-full"
+                className="bg-cwa-green/10 text-cwa-green border border-cwa-green/30 text-sm font-semibold font-sans px-4 py-2 rounded-full"
               >
                 {item}
               </span>
@@ -229,7 +229,7 @@ export default function ProgramsPage() {
       {/* CTA */}
       <SectionWrapper bg="dark" py="lg">
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="font-spartan font-extrabold text-white text-4xl lg:text-5xl leading-tight mb-6">
+          <h2 className="font-heading font-semibold text-white text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight mb-6">
             Ready to Get Involved?
           </h2>
           <p className="text-white/80 text-lg leading-relaxed mb-8 font-sans">

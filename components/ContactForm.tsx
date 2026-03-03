@@ -20,11 +20,9 @@ export default function ContactForm() {
     e.preventDefault();
     setStatus("sending");
 
-    // Build mailto link as fallback
     const mailtoBody = `Name: ${form.name}%0APhone: ${form.phone}%0A%0A${form.message}`;
     const mailtoLink = `mailto:statecwa@gmail.com?subject=${encodeURIComponent(form.subject || "Website Contact")}&body=${mailtoBody}`;
 
-    // Simulate brief delay then redirect to mailto
     setTimeout(() => {
       window.location.href = mailtoLink;
       setStatus("sent");
@@ -32,13 +30,13 @@ export default function ContactForm() {
   };
 
   const inputClass =
-    "w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cwa-purple focus:border-transparent text-sm font-sans transition-colors";
+    "w-full bg-white border border-gray-200 rounded-xl px-4 py-3.5 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cwa-purple/30 focus:border-cwa-purple text-[15px] font-sans transition-all duration-200";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
-          <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-1.5 font-sans">
+          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1.5 font-sans">
             Full Name <span className="text-red-500">*</span>
           </label>
           <input
@@ -53,7 +51,7 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-1.5 font-sans">
+          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1.5 font-sans">
             Email Address <span className="text-red-500">*</span>
           </label>
           <input
@@ -71,7 +69,7 @@ export default function ContactForm() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
-          <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-1.5 font-sans">
+          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1.5 font-sans">
             Phone Number
           </label>
           <input
@@ -85,7 +83,7 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 mb-1.5 font-sans">
+          <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1.5 font-sans">
             Subject
           </label>
           <select
@@ -108,7 +106,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-1.5 font-sans">
+        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1.5 font-sans">
           Message <span className="text-red-500">*</span>
         </label>
         <textarea
@@ -126,7 +124,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending" || status === "sent"}
-        className="w-full bg-cwa-gold hover:bg-yellow-400 disabled:opacity-60 text-cwa-dark font-spartan font-bold text-base px-6 py-4 rounded-lg transition-colors duration-150 shadow-md hover:shadow-lg"
+        className="w-full bg-cwa-gold hover:bg-cwa-gold/90 disabled:opacity-60 text-cwa-dark font-sans font-semibold text-base px-6 py-4 rounded-full transition-all duration-200"
       >
         {status === "sending"
           ? "Opening Mail Client..."

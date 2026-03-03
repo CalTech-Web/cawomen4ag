@@ -64,7 +64,7 @@ export default function MembershipPage() {
       {/* Membership Tiers */}
       <SectionWrapper bg="white" py="lg">
         <div className="text-center mb-12">
-          <h2 className="font-spartan font-extrabold text-cwa-dark text-4xl lg:text-5xl leading-tight mb-4">
+          <h2 className="font-heading font-semibold text-cwa-dark text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight mb-4">
             Membership Options
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto font-sans">
@@ -77,8 +77,8 @@ export default function MembershipPage() {
               key={i}
               className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200 text-center"
             >
-              <h3 className="font-spartan font-bold text-cwa-dark text-base mb-3 leading-snug">{tier.name}</h3>
-              <p className="font-spartan font-extrabold text-cwa-purple text-2xl leading-none">{tier.price}</p>
+              <h3 className="font-heading font-semibold text-cwa-dark text-base mb-3 leading-snug">{tier.name}</h3>
+              <p className="font-heading font-bold text-cwa-purple text-2xl leading-none">{tier.price}</p>
               {tier.period && (
                 <p className="text-gray-500 text-sm font-sans mt-1">{tier.period}</p>
               )}
@@ -94,7 +94,7 @@ export default function MembershipPage() {
             href="https://cawomen4ag.com/wp-content/uploads/2025/03/Introduction-to-web-donor-application.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-cwa-gold hover:bg-yellow-400 text-cwa-dark font-spartan font-bold text-sm px-6 py-3 rounded-md transition-colors duration-150"
+            className="inline-flex items-center gap-2 bg-cwa-gold hover:bg-yellow-400 text-cwa-dark font-heading font-semibold text-sm px-6 py-3 rounded-full transition-colors duration-150"
           >
             Download Donor Application
           </a>
@@ -105,7 +105,7 @@ export default function MembershipPage() {
       <SectionWrapper bg="light" py="lg" id="inquire">
         <div className="max-w-xl mx-auto">
           <div className="text-center mb-10">
-            <h2 className="font-spartan font-extrabold text-cwa-dark text-4xl leading-tight mb-4">
+            <h2 className="font-heading font-semibold text-cwa-dark text-3xl sm:text-4xl leading-tight mb-4">
               Membership Inquiries
             </h2>
             <p className="text-gray-600 text-base font-sans">
@@ -174,7 +174,7 @@ function MembershipInquiryForm() {
       </div>
       <button
         type="submit"
-        className="w-full bg-cwa-gold hover:bg-yellow-400 text-cwa-dark font-spartan font-bold text-base px-6 py-4 rounded-lg transition-colors duration-150 shadow-md hover:shadow-lg"
+        className="w-full bg-cwa-gold hover:bg-yellow-400 text-cwa-dark font-heading font-semibold text-base px-6 py-4 rounded-lg transition-colors duration-150"
       >
         Send Inquiry
       </button>

@@ -67,10 +67,10 @@ export default function ContactPage() {
           {/* Left: Contact Info */}
           <div className="lg:col-span-2 space-y-6">
             <div>
-              <p className="font-spartan font-semibold text-cwa-green text-sm uppercase tracking-widest mb-3">
+              <p className="font-sans font-semibold text-cwa-green text-[11px] uppercase tracking-[0.2em] mb-3">
                 Contact Information
               </p>
-              <h2 className="font-spartan font-extrabold text-cwa-dark text-3xl leading-tight mb-4">
+              <h2 className="font-heading font-semibold text-cwa-dark text-3xl leading-tight mb-4">
                 California Women For Agriculture
               </h2>
               <p className="text-gray-600 text-base leading-relaxed font-sans">
@@ -80,12 +80,12 @@ export default function ContactPage() {
 
             <div className="space-y-4">
               {contactInfo.map((item, i) => (
-                <div key={i} className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl border border-gray-100">
+                <div key={i} className="flex items-start gap-4 p-4 bg-cwa-cream rounded-xl border border-gray-100">
                   <div className="w-12 h-12 bg-cwa-purple/10 text-cwa-purple rounded-xl flex items-center justify-center flex-shrink-0">
                     {item.icon}
                   </div>
                   <div className="flex-1">
-                    <p className="font-spartan font-bold text-cwa-dark text-sm mb-1">{item.title}</p>
+                    <p className="font-heading font-semibold text-cwa-dark text-sm mb-1">{item.title}</p>
                     {item.lines.map((line, j) => (
                       <p key={j} className="text-gray-600 text-sm font-sans">{line}</p>
                     ))}
@@ -104,8 +104,8 @@ export default function ContactPage() {
 
             {/* Communications Director */}
             <div className="bg-cwa-purple/5 rounded-xl p-5 border border-cwa-purple/20">
-              <p className="font-spartan font-bold text-cwa-dark text-sm mb-1">Communications Director</p>
-              <p className="font-spartan font-semibold text-cwa-purple text-base">Lora K. Daniels</p>
+              <p className="font-heading font-semibold text-cwa-dark text-sm mb-1">Communications Director</p>
+              <p className="font-sans font-semibold text-cwa-purple text-base">Lora K. Daniels</p>
               <a href="tel:+19162151494" className="text-gray-600 text-sm font-sans hover:text-cwa-purple transition-colors block mt-1">
                 (916) 215-1494
               </a>
@@ -116,7 +116,7 @@ export default function ContactPage() {
 
             {/* Social Media */}
             <div>
-              <p className="font-spartan font-bold text-cwa-dark text-sm mb-3">Follow CWA</p>
+              <p className="font-heading font-semibold text-cwa-dark text-sm mb-3">Follow CWA</p>
               <div className="flex gap-3">
                 <a
                   href="https://www.facebook.com"
@@ -146,11 +146,11 @@ export default function ContactPage() {
 
           {/* Right: Contact Form */}
           <div className="lg:col-span-3">
-            <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
-              <p className="font-spartan font-semibold text-cwa-green text-sm uppercase tracking-widest mb-2">
+            <div className="bg-cwa-cream rounded-2xl p-8 border border-gray-200">
+              <p className="font-sans font-semibold text-cwa-green text-[11px] uppercase tracking-[0.2em] mb-2">
                 Send a Message
               </p>
-              <h2 className="font-spartan font-extrabold text-cwa-dark text-2xl leading-tight mb-6">
+              <h2 className="font-heading font-semibold text-cwa-dark text-2xl leading-tight mb-6">
                 Contact Form
               </h2>
               <ContactForm />
@@ -162,7 +162,7 @@ export default function ContactPage() {
       {/* Membership CTA */}
       <SectionWrapper bg="dark" py="md">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="font-spartan font-extrabold text-white text-3xl mb-4">
+          <h2 className="font-heading font-semibold text-white text-3xl mb-4">
             Ready to Join CWA?
           </h2>
           <p className="text-white/80 text-base leading-relaxed mb-6 font-sans">
@@ -170,7 +170,7 @@ export default function ContactPage() {
           </p>
           <a
             href="/membership"
-            className="inline-flex items-center bg-cwa-gold hover:bg-yellow-400 text-cwa-dark font-spartan font-bold text-base px-8 py-4 rounded-lg transition-colors duration-150 shadow-md"
+            className="inline-flex items-center bg-cwa-gold hover:bg-yellow-400 text-cwa-dark font-heading font-semibold text-base px-8 py-4 rounded-lg transition-colors duration-150"
           >
             Join CWA Today
           </a>
