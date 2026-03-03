@@ -15,7 +15,7 @@ export default function ProgramCard({
   href,
 }: ProgramCardProps) {
   const content = (
-    <div className="group bg-white rounded-xl p-8 border border-gray-100/80 hover:border-cwa-purple/30 transition-all duration-300 h-full flex flex-col">
+    <div className="group bg-cwa-green/[0.04] rounded-xl p-8 border border-gray-100/80 hover:border-cwa-purple/30 shadow-md hover:shadow-lg transition-all duration-300 h-full flex flex-col">
       <div className="w-12 h-12 rounded-full bg-cwa-cream flex items-center justify-center mb-6 text-cwa-purple">
         {icon}
       </div>

@@ -124,14 +124,6 @@ const upcomingEvents = [
     featured: false,
     category: "Advocacy",
   },
-  {
-    title: "September SWM and Ag Booster BBQ Fundraiser",
-    date: "September 2026",
-    location: "TBD",
-    description: "CWA's September Statewide Meeting and the annual Ag Booster BBQ Fundraiser. Location and details to be announced.",
-    featured: false,
-    category: "Meeting",
-  },
 ];
 
 const sponsors = [
@@ -247,7 +239,7 @@ export default function HomePage() {
       <SectionWrapper bg="white" py="lg">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <FadeIn direction="left">
-            <div className="rounded-2xl overflow-hidden aspect-[3/2]">
+            <div className="rounded-2xl overflow-hidden aspect-[3/2] shadow-lg">
               <Image
                 src="/images/pexels-grape-things-3840331.jpg"
                 alt="California agriculture vineyard"
@@ -288,7 +280,7 @@ export default function HomePage() {
           <Button href="/events" variant="outline">View All Events</Button>
         </div>
         <FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {upcomingEvents.map((event, i) => (
               <EventCard key={i} {...event} />
             ))}

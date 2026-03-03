@@ -145,6 +145,17 @@ export default function Footer() {
             &copy; 2026 California Women For Agriculture. All Rights Reserved.
           </p>
           <span className="text-white/30 text-xs">EIN: 95-3129063 | 501(c)(5) Nonprofit</span>
+          <span className="text-white/30 text-xs">
+            Built by{" "}
+            <a
+              href="https://caltechweb.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/50 hover:text-cwa-gold transition-colors duration-200"
+            >
+              CalTech Web
+            </a>
+          </span>
         </div>
       </div>
     </footer>
