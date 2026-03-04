@@ -31,13 +31,19 @@ export default function FoundationPage() {
               The CWA Foundation
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed mb-4 font-sans">
-              We are thrilled to announce the launch of the California Women for Agriculture Foundation (CWAF), a bold new chapter in our 50-year legacy of championing California agriculture.
+              Our mission: cultivate the next generation of agricultural leaders through transformative opportunities that money shouldn&apos;t be a roadblock.
             </p>
             <p className="text-gray-600 text-lg leading-relaxed mb-4 font-sans">
-              The CWA Foundation exists to ensure that the agricultural leaders of tomorrow have the tools, opportunities, and mentorship they need to succeed. Through scholarships, leadership programs, and advocacy training, we are building a pipeline of passionate, informed agricultural advocates.
+              Through CWAF scholarships, emerging leaders will have an opportunity to attend CWA state meetings/events where policy is shaped, hands-on leadership training that builds real-world skills, and connections with organizations that share our commitment to agriculture&apos;s vitality.
             </p>
-            <p className="text-gray-600 text-lg leading-relaxed mb-6 font-sans">
-              California's food supply depends on the voices of those who understand it best. The CWA Foundation is committed to developing those voices for generations to come.
+            <p className="text-gray-600 text-base leading-relaxed mb-4 font-sans">
+              As the nation&apos;s most productive agricultural state, California demands strong, informed advocates who understand both the land, economics, and the legislative halls. Your partnership ensures that CWA remains not just a voice, but a formidable force, championing farmers, ranchers, and agricultural communities through empowering the next wave of leaders to carry this torch forward.
+            </p>
+            <p className="text-gray-600 text-base leading-relaxed mb-4 font-sans">
+              When you support CWAF, you&apos;re doing more than donating. You&apos;re planting seeds for agriculture&apos;s future. You&apos;re ensuring that passionate, capable leaders have the tools, training, and networks they need to protect and advance California agriculture for generations to come.
+            </p>
+            <p className="text-gray-600 text-base leading-relaxed mb-6 font-sans font-semibold">
+              Join us in nurturing tomorrow&apos;s agricultural champions. Together, we&apos;re honoring our proud heritage while cultivating the leaders who will defend, sustain, and grow California agriculture for the next 50 years. The future of California agriculture starts with the leaders we invest in today.
             </p>
             <Button href="/contact" variant="secondary">
               Learn How to Support the Foundation
