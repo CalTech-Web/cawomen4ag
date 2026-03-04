@@ -73,7 +73,7 @@ export default function Hero({
   }
 
   return (
-    <section className="relative max-w-7xl mx-auto mt-[75px] rounded-2xl overflow-hidden min-h-[40vh] flex items-center justify-center text-center">
+    <section className="relative max-w-7xl mx-auto mt-[150px] rounded-2xl overflow-hidden min-h-[40vh] flex items-center justify-center text-center">
       {bgImage && (
         <>
           <Image src={bgImage} alt="" fill className="object-cover" priority sizes="(max-width: 1280px) 100vw, 1280px" />
