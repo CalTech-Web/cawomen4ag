@@ -34,7 +34,7 @@ export default function ScholarshipPage() {
         subtitle="CWA Foundation"
         title="Scholarship Opportunity"
         description="Introducing a Scholarship Opportunity to attend the CWA Sacramento Legislative Event."
-        bgImage="/images/pexels-pixabay-461960.jpg"
+        bgImage="/images/pexels-photo-602428.jpeg"
         compact
       />
 
