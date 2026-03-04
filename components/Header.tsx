@@ -5,11 +5,32 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-const navLinks = [
+interface NavLink {
+  href: string;
+  label: string;
+  children?: { href: string; label: string; external?: boolean }[];
+}
+
+const navLinks: NavLink[] = [
   { href: "/about", label: "About Us" },
   { href: "/events", label: "Events" },
   { href: "/chapters", label: "Chapters" },
-  { href: "/programs", label: "Programs" },
+  {
+    href: "/resources",
+    label: "Media & Resources",
+    children: [
+      { href: "/statewide-meeting-information", label: "Statewide Meeting Information" },
+    ],
+  },
+  {
+    href: "/foundation",
+    label: "CWA Foundation",
+    children: [
+      { href: "/scholarship-opportunity", label: "Scholarship Opportunity" },
+      { href: "/donors", label: "Sponsors" },
+      { href: "https://cawomen4ag.com/wp-content/uploads/2025/03/Introduction-to-web-donor-application.pdf", label: "Download Donor Application", external: true },
+    ],
+  },
   { href: "/membership", label: "Membership" },
   { href: "/contact", label: "Contact" },
 ];
@@ -92,22 +113,67 @@ export default function Header() {
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => {
-              const isActive = pathname === link.href || pathname.startsWith(link.href + "/");
+              const isActive = pathname === link.href || (link.children?.some(c => pathname === c.href)) || false;
+              const hasChildren = link.children && link.children.length > 0;
               return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`relative px-3.5 py-2 text-sm font-sans font-medium transition-colors duration-200 ${
-                    isActive
-                      ? showWhiteBg ? "text-cwa-purple" : "text-cwa-gold"
-                      : showWhiteBg ? "text-gray-600 hover:text-cwa-purple" : "text-white/85 hover:text-white"
-                  }`}
-                >
-                  {link.label}
-                  {isActive && (
-                    <span className="absolute bottom-0 left-3.5 right-3.5 h-0.5 bg-cwa-gold rounded-full" />
+                <div key={link.href} className="relative group">
+                  <Link
+                    href={link.href}
+                    className={`relative px-3.5 py-2 text-sm font-sans font-medium transition-colors duration-200 inline-flex items-center gap-1 ${
+                      isActive
+                        ? showWhiteBg ? "text-cwa-purple" : "text-cwa-gold"
+                        : showWhiteBg ? "text-gray-600 hover:text-cwa-purple" : "text-white/85 hover:text-white"
+                    }`}
+                  >
+                    {link.label}
+                    {hasChildren && (
+                      <svg className="w-3 h-3 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    )}
+                    {isActive && (
+                      <span className="absolute bottom-0 left-3.5 right-3.5 h-0.5 bg-cwa-gold rounded-full" />
+                    )}
+                  </Link>
+                  {hasChildren && (
+                    <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                      <div className="bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-[220px]">
+                        {link.children!.map((child) => {
+                          const childActive = pathname === child.href;
+                          if (child.external) {
+                            return (
+                              <a
+                                key={child.href}
+                                href={child.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 px-4 py-2.5 text-sm font-sans text-gray-600 hover:text-cwa-purple hover:bg-cwa-cream/50 transition-colors"
+                              >
+                                {child.label}
+                                <svg className="w-3 h-3 opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                              </a>
+                            );
+                          }
+                          return (
+                            <Link
+                              key={child.href}
+                              href={child.href}
+                              className={`block px-4 py-2.5 text-sm font-sans transition-colors ${
+                                childActive
+                                  ? "text-cwa-purple bg-cwa-cream/50"
+                                  : "text-gray-600 hover:text-cwa-purple hover:bg-cwa-cream/50"
+                              }`}
+                            >
+                              {child.label}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
                   )}
-                </Link>
+                </div>
               );
             })}
           </nav>
@@ -143,20 +209,55 @@ export default function Header() {
       <div className={`lg:hidden transition-all duration-300 overflow-hidden bg-white ${mobileOpen ? "max-h-screen opacity-100 shadow-lg" : "max-h-0 opacity-0"}`}>
         <nav className="border-t border-gray-100 px-4 py-3 flex flex-col gap-0.5">
           {navLinks.map((link) => {
-            const isActive = pathname === link.href || pathname.startsWith(link.href + "/");
+            const isActive = pathname === link.href || (link.children?.some(c => pathname === c.href)) || false;
             return (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className={`px-4 py-3 rounded-lg text-sm font-sans font-medium transition-all ${
-                  isActive
-                    ? "text-cwa-purple bg-cwa-cream"
-                    : "text-gray-600 hover:text-cwa-purple hover:bg-gray-50"
-                }`}
-              >
-                {link.label}
-              </Link>
+              <div key={link.href}>
+                <Link
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className={`px-4 py-3 rounded-lg text-sm font-sans font-medium transition-all block ${
+                    isActive
+                      ? "text-cwa-purple bg-cwa-cream"
+                      : "text-gray-600 hover:text-cwa-purple hover:bg-gray-50"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+                {link.children && link.children.map((child) => {
+                  const childActive = pathname === child.href;
+                  if (child.external) {
+                    return (
+                      <a
+                        key={child.href}
+                        href={child.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setMobileOpen(false)}
+                        className="flex items-center gap-1.5 pl-8 pr-4 py-2.5 rounded-lg text-sm font-sans text-gray-500 hover:text-cwa-purple hover:bg-gray-50 transition-all"
+                      >
+                        {child.label}
+                        <svg className="w-3 h-3 opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+                    );
+                  }
+                  return (
+                    <Link
+                      key={child.href}
+                      href={child.href}
+                      onClick={() => setMobileOpen(false)}
+                      className={`block pl-8 pr-4 py-2.5 rounded-lg text-sm font-sans transition-all ${
+                        childActive
+                          ? "text-cwa-purple bg-cwa-cream/50"
+                          : "text-gray-500 hover:text-cwa-purple hover:bg-gray-50"
+                      }`}
+                    >
+                      {child.label}
+                    </Link>
+                  );
+                })}
+              </div>
             );
           })}
           <Link
