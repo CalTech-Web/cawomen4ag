@@ -132,10 +132,13 @@ function PersonCard({ person }: { person: { name: string; chapter: string; title
             />
           </div>
         ) : (
-          <div className="w-14 h-14 bg-gradient-to-br from-cwa-purple to-cwa-purple/70 rounded-full flex items-center justify-center flex-shrink-0">
-            <span className="text-white font-heading font-bold text-xl">
-              {person.name.charAt(0)}
-            </span>
+          <div className="relative w-14 h-14 rounded-full overflow-hidden flex-shrink-0 bg-cwa-cream">
+            <Image
+              src="/images/leaf.png"
+              alt=""
+              fill
+              className="object-cover"
+            />
           </div>
         )}
         <div>
