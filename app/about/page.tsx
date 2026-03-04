@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
 import FadeIn from "@/components/FadeIn";
+import LightboxImage from "@/components/LightboxImage";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -19,33 +20,93 @@ const objectives = [
   "To develop a rapport with consumers, educators, and governmental and business leaders in communities throughout the State.",
 ];
 
-const leaders = [
+const executiveBoard = [
   {
-    name: "Bobbie Lynn Galvan",
-    title: "State President",
-    phone: "(760) 393-5015",
-    email: "bgalvan@oceanmist.com",
-    photo: null,
-    bio: "Bobbie Lynn Galvan serves as the current State President of California Women For Agriculture, leading the organization's statewide advocacy and membership initiatives.",
-  },
-  {
-    name: "Sharron Zoller",
-    title: "Past State President (2022-2024)",
-    photo: null,
-    bio: "A Lake County walnut grower and past president. \"In the years to come, CWA will continue to help shape decisions that secure our food supply, strengthen rural communities, and build our economies. We know that when women speak together, the world listens differently.\"",
-  },
-  {
-    name: "Lora K. Daniels",
-    title: "Communications Director",
-    phone: "(916) 215-1494",
+    name: "Lora Daniels",
+    chapter: "San Joaquin Chapter",
+    title: "President Elect",
     photo: "/images/Lora-Daniels-r9extb53niv1tkwmk3a4iwd8s1sqd3c5f03ddwynco.jpg",
-    bio: "Lora K. Daniels serves as CWA's Communications Director, overseeing outreach, media relations, and The Compass Newsletter.",
   },
   {
-    name: "Sara Reid",
-    title: "Past State President",
+    name: "Nanette Simonian",
+    chapter: "Central Valley Chapter",
+    title: "President Elect",
+    photo: "/images/Nanette-Simonian-jpg-qik20htzkrp0o0pbeijqoz77s3msbyd5stg62ydjnc-qlr09c5f7jre1lj0a2p18ov09lqnmp3ojq41bexdx4.jpg",
+  },
+  {
+    name: "Sandy Fiack",
+    chapter: "North Valley Chapter",
+    title: "VP External",
     photo: null,
-    bio: "Sara Reid, a Vice President at CoBank Farm Credit Banking Group, has been a dedicated leader in advancing CWA's mission of agricultural advocacy and education.",
+  },
+  {
+    name: "Jill Levake",
+    chapter: "Sacramento Valley Chapter",
+    title: "VP External",
+    photo: "/images/Jill-rha3xdpk7zv61898z7cev8jxseb14xjilb42l639vc.jpg",
+  },
+  {
+    name: "Paola Saenz",
+    chapter: "Central Valley Chapter",
+    title: "Secretary",
+    photo: null,
+  },
+  {
+    name: "Susie Sorenson",
+    chapter: "North Valley Chapter",
+    title: "Treasurer",
+    photo: null,
+  },
+  {
+    name: "Nancy Machut",
+    chapter: "Santa Maria Chapter",
+    title: "Asst. Treasurer",
+    photo: null,
+  },
+  {
+    name: "Debra Stroschein",
+    chapter: "Palo Verde Chapter",
+    title: "Past President",
+    photo: "/images/Debra-Stroschein-qqw7iym6mj9p7oq6kqq4g2ih8tpfryb8ggp9cgh0vs.jpg",
+  },
+];
+
+const districtDirectors = [
+  {
+    name: "Joan Webster",
+    chapter: "Northern Valley Chapter",
+    title: "Northern District",
+    photo: null,
+  },
+  {
+    name: "Fatima Gioletti",
+    chapter: "Stanislaus Chapter",
+    title: "North Central District",
+    photo: null,
+  },
+  {
+    name: "Stacey Jischke",
+    chapter: "Kern County Chapter",
+    title: "Central Valley District",
+    photo: "/images/Stacey-rhaxyexe9lpwkfzthzixzxxgok10p8667xgf8h8bso.jpg",
+  },
+  {
+    name: "Mary Ann Hooker",
+    chapter: "Salinas Valley Chapter",
+    title: "Central Coast District",
+    photo: null,
+  },
+  {
+    name: "Summer Spraggins",
+    chapter: "Palo Verde Chapter",
+    title: "Southern District",
+    photo: "/images/Summer-Scroggins-Image-qdpt917s2zvjem2jgb6ip8d41p0kehr86998115588-qdptb5cpgkrrj0zy3q3at75g5wlapz5hgq3jwg0988.webp",
+  },
+  {
+    name: "Victoria Weatherly",
+    chapter: "Santa Maria Chapter",
+    title: "Parliamentarian",
+    photo: "/images/Victoria-rhaxyior0xv1uvucw15g9wzb23ihk0l3kg2d5l2r3s.jpg",
   },
 ];
 
@@ -57,6 +118,36 @@ const sponsors = [
   "Fresno Madera Farm Credit",
 ];
 
+function PersonCard({ person }: { person: { name: string; chapter: string; title: string; photo: string | null } }) {
+  return (
+    <div className="bg-white border border-gray-150 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-200 h-full flex flex-col">
+      <div className="flex items-start gap-4 mb-3">
+        {person.photo ? (
+          <div className="relative w-14 h-14 rounded-full overflow-hidden flex-shrink-0">
+            <Image
+              src={person.photo}
+              alt={person.name}
+              fill
+              className="object-cover"
+            />
+          </div>
+        ) : (
+          <div className="w-14 h-14 bg-gradient-to-br from-cwa-purple to-cwa-purple/70 rounded-full flex items-center justify-center flex-shrink-0">
+            <span className="text-white font-heading font-bold text-xl">
+              {person.name.charAt(0)}
+            </span>
+          </div>
+        )}
+        <div>
+          <h3 className="font-heading font-semibold text-cwa-dark text-lg leading-snug">{person.name}</h3>
+          <p className="text-cwa-green font-sans font-semibold text-sm mt-0.5">{person.title}</p>
+          <p className="text-gray-500 font-sans text-xs mt-0.5">{person.chapter}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function AboutPage() {
   return (
     <>
@@ -64,9 +155,41 @@ export default function AboutPage() {
         subtitle="About Us"
         title="Fifty Years of Fighting for California Agriculture"
         description="Founded in 1975, California Women For Agriculture has grown from 55 founding members to 1,500+ across 19 chapters, united by a single conviction: California agriculture deserves a strong voice."
-        bgImage="/images/pexels-greta-hoffman-7728639-qjqpdrr19z7ahctuq7op6dih4ljpleice4h5f5vdps.jpg"
+        bgImage="/images/noah-buscher-x8ZStukS2PM-unsplash.jpg"
         compact
       />
+
+      {/* CWA Foundation Announcement */}
+      <SectionWrapper bg="light" py="lg">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <FadeIn direction="left">
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <LightboxImage
+                src="/images/pexels-gary-barnes-6231905.jpg"
+                alt="Women in agriculture"
+                containerClassName="relative aspect-[4/3] rounded-2xl overflow-hidden"
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+          </FadeIn>
+          <FadeIn direction="right">
+            <p className="font-sans font-semibold text-cwa-green text-[11px] uppercase tracking-[0.2em] mb-3">
+              A New Chapter
+            </p>
+            <h2 className="font-heading font-semibold text-cwa-dark text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight mb-6">
+              The CWA Foundation
+            </h2>
+            <p className="text-gray-600 text-lg leading-relaxed mb-4 font-sans">
+              We're thrilled to announce the launch of the California Women for Agriculture Foundation (CWAF), a bold new chapter in our 50 year legacy of championing California agriculture.
+            </p>
+            <p className="text-gray-600 text-base leading-relaxed mb-8 font-sans">
+              For half a century, CWA has been the voice of California's agricultural community. Now, as we celebrate this milestone, the CWA Foundation takes our mission further by investing directly in the people who will advocate for California agriculture's future.
+            </p>
+            <Button href="/foundation" variant="secondary">Find Out More</Button>
+          </FadeIn>
+        </div>
+      </SectionWrapper>
 
       {/* Founding Story */}
       <SectionWrapper bg="white" py="lg">
@@ -74,7 +197,7 @@ export default function AboutPage() {
           <FadeIn direction="left" className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
               <Image
-                src="/images/cwa-logo.webp"
+                src="/images/CWA-50th.png.webp"
                 alt="CWA 50th Anniversary Logo"
                 fill
                 className="object-contain bg-cwa-cream p-8"
@@ -154,8 +277,34 @@ export default function AboutPage() {
         </div>
       </SectionWrapper>
 
-      {/* Leadership */}
+      {/* Image Gallery */}
       <SectionWrapper bg="white" py="lg">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <FadeIn delay={0}>
+            <div className="rounded-2xl overflow-hidden shadow-md aspect-square">
+              <Image src="/images/pexels-enric-cruz-lopez-6272310.jpg" alt="Agricultural field" fill className="object-cover !relative" sizes="25vw" />
+            </div>
+          </FadeIn>
+          <FadeIn delay={80}>
+            <div className="rounded-2xl overflow-hidden shadow-md aspect-square">
+              <Image src="/images/olive-rha3xfl8lnxqog6io85o082uz61rkbqz9kf1jq0hiw.jpg" alt="Olive branch" fill className="object-cover !relative" sizes="25vw" />
+            </div>
+          </FadeIn>
+          <FadeIn delay={160}>
+            <div className="rounded-2xl overflow-hidden shadow-md aspect-square">
+              <Image src="/images/almonds-qqw7j571ydipgygmibkifiupeit09u1ctd9npe79o8.jpg" alt="Almonds" fill className="object-cover !relative" sizes="25vw" />
+            </div>
+          </FadeIn>
+          <FadeIn delay={240}>
+            <div className="rounded-2xl overflow-hidden shadow-md aspect-square">
+              <Image src="/images/wallnut-image-rhavwf2s94faljh7l028pm556kqsr0evdomd6ay1mg.jpg" alt="Walnut grove" fill className="object-cover !relative" sizes="25vw" />
+            </div>
+          </FadeIn>
+        </div>
+      </SectionWrapper>
+
+      {/* State Executive Board */}
+      <SectionWrapper bg="light" py="lg">
         <div className="text-center mb-12">
           <p className="font-sans font-semibold text-cwa-purple text-[11px] uppercase tracking-[0.2em] mb-3">
             Our Leaders
@@ -164,48 +313,29 @@ export default function AboutPage() {
             State Executive Board
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {leaders.map((leader, i) => (
-            <FadeIn key={i} delay={i * 80}>
-              <div className="bg-white border border-gray-150 rounded-2xl p-7 shadow-sm hover:shadow-lg transition-all duration-200 h-full flex flex-col">
-                <div className="flex items-start gap-4 mb-4">
-                  {leader.photo ? (
-                    <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
-                      <Image
-                        src={leader.photo}
-                        alt={leader.name}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  ) : (
-                    <div className="w-16 h-16 bg-gradient-to-br from-cwa-purple to-cwa-purple/70 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-heading font-bold text-2xl">
-                        {leader.name.charAt(0)}
-                      </span>
-                    </div>
-                  )}
-                  <div>
-                    <h3 className="font-heading font-semibold text-cwa-dark text-xl leading-snug">{leader.name}</h3>
-                    <p className="text-cwa-green font-sans font-semibold text-sm mt-0.5">{leader.title}</p>
-                  </div>
-                </div>
-                <p className="text-gray-600 text-sm leading-relaxed font-sans flex-1">{leader.bio}</p>
-                {(leader.phone || leader.email) && (
-                  <div className="mt-4 pt-4 border-t border-gray-100 flex flex-wrap gap-4">
-                    {leader.phone && (
-                      <a href={`tel:${leader.phone.replace(/\D/g, "")}`} className="text-cwa-purple text-sm font-sans font-semibold hover:underline">
-                        {leader.phone}
-                      </a>
-                    )}
-                    {leader.email && (
-                      <a href={`mailto:${leader.email}`} className="text-cwa-purple text-sm font-sans font-semibold hover:underline">
-                        {leader.email}
-                      </a>
-                    )}
-                  </div>
-                )}
-              </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {executiveBoard.map((person, i) => (
+            <FadeIn key={i} delay={i * 60}>
+              <PersonCard person={person} />
+            </FadeIn>
+          ))}
+        </div>
+      </SectionWrapper>
+
+      {/* District Directors */}
+      <SectionWrapper bg="white" py="lg">
+        <div className="text-center mb-12">
+          <p className="font-sans font-semibold text-cwa-purple text-[11px] uppercase tracking-[0.2em] mb-3">
+            Regional Leadership
+          </p>
+          <h2 className="font-heading font-semibold text-cwa-dark text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight">
+            District Directors
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {districtDirectors.map((person, i) => (
+            <FadeIn key={i} delay={i * 60}>
+              <PersonCard person={person} />
             </FadeIn>
           ))}
         </div>
@@ -214,7 +344,7 @@ export default function AboutPage() {
       {/* Notable Alumni */}
       <div className="bg-cwa-dark py-16 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <Image src="/images/pexels-markus-spiske-95215-768x768.jpg.webp" alt="" fill className="object-cover" />
+          <Image src="/images/pexels-matthias-oben-3687927-qjqpeg6kplkkas78bzhvhsd8hdcjlu4r9hnfxf4szc.jpg" alt="" fill className="object-cover" />
         </div>
         <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="font-sans font-semibold text-cwa-gold text-[11px] uppercase tracking-[0.2em] mb-4">
@@ -229,9 +359,38 @@ export default function AboutPage() {
         </div>
       </div>
 
+      {/* Contact Info */}
+      <SectionWrapper bg="light" py="lg">
+        <div className="max-w-2xl mx-auto text-center">
+          <p className="font-sans font-semibold text-cwa-green text-[11px] uppercase tracking-[0.2em] mb-3">
+            Get in Touch
+          </p>
+          <h2 className="font-heading font-semibold text-cwa-dark text-3xl sm:text-4xl leading-tight mb-8">
+            Contact Info
+          </h2>
+          <div className="space-y-3 mb-8">
+            <p className="text-gray-600 text-lg font-sans">1521 I Street, Sacramento, CA 95814</p>
+            <p>
+              <a href="mailto:statecwa@gmail.com" className="text-cwa-purple text-lg font-sans font-semibold hover:underline">statecwa@gmail.com</a>
+            </p>
+            <p>
+              <a href="tel:9164412910" className="text-cwa-purple text-lg font-sans font-semibold hover:underline">(916) 441-2910</a>
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button href="/membership" variant="secondary" size="lg">
+              Join the Movement
+            </Button>
+            <Button href="/contact" variant="outline" size="lg">
+              Contact Us
+            </Button>
+          </div>
+        </div>
+      </SectionWrapper>
+
       {/* Sponsors */}
-      <SectionWrapper bg="light" py="md">
-        <div className="text-center mb-10">
+      <SectionWrapper bg="white" py="md">
+        <div className="text-center mb-8">
           <p className="font-sans font-semibold text-cwa-green text-[11px] uppercase tracking-[0.2em] mb-2">
             Long-Term Partners
           </p>
@@ -239,17 +398,12 @@ export default function AboutPage() {
             Our Sponsors: 20+ Years of Farm Credit Support
           </h2>
         </div>
-        <div className="flex flex-wrap justify-center gap-4 mb-10">
+        <div className="flex flex-wrap justify-center gap-4">
           {sponsors.map((sponsor, i) => (
-            <div key={i} className="bg-white border border-gray-200 rounded-xl px-7 py-4 shadow-sm hover:border-cwa-gold transition-colors">
+            <div key={i} className="bg-cwa-cream border border-gray-100 rounded-xl px-7 py-4 shadow-sm hover:border-cwa-gold transition-colors">
               <p className="font-heading font-semibold text-cwa-dark text-sm">{sponsor}</p>
             </div>
           ))}
-        </div>
-        <div className="text-center">
-          <Button href="/membership" variant="secondary" size="lg">
-            Join the Movement
-          </Button>
         </div>
       </SectionWrapper>
     </>
