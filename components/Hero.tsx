@@ -22,7 +22,7 @@ export default function Hero({
 }: HeroProps) {
   if (!compact) {
     return (
-      <section className="relative w-full min-h-screen flex items-end">
+      <section className="relative w-full min-h-screen flex items-end pt-[75px]">
         {bgImage && (
           <Image
             src={bgImage}
