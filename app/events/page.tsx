@@ -17,6 +17,7 @@ export default function EventsPage() {
       <Hero
         subtitle="Events"
         title="Upcoming Events"
+        bgImage="/images/pexels-pixabay-461960.jpg"
         compact
       />
 
