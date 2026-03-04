@@ -109,10 +109,10 @@ const testimonials = [
 
 const upcomingEvents = [
   {
-    title: "March Statewide Meeting: Rooted in the Valley",
+    title: "2026 March Statewide Meeting",
     date: "March 6-8, 2026",
     location: "Carpinteria, CA",
-    description: "From Mountain Farms to Coastal Fields. Join the Carpinteria/Santa Barbara Chapter for tours, dinners, and CWA's Statewide Meeting at the Holiday Inn Express & Suites. Register by February 13th.",
+    description: "Rooted in the Valley: From Mountain Farms to Coastal Fields. Welcome social, tours and lunch, dinner, executive meeting, and SWM hosted by the Carpinteria/Santa Barbara Chapter at the Holiday Inn Express & Suites.",
     featured: true,
     category: "Meeting",
     href: "/events",
@@ -121,7 +121,7 @@ const upcomingEvents = [
     title: "Statewide Legislative Days",
     date: "May 4-5, 2026",
     location: "Sacramento, CA",
-    description: "Meet directly with California lawmakers during CWA's annual two-day legislative event. Includes luncheon, legislative briefing, Cornucopia Dinner, and Capitol visits. Registration deadline April 13th.",
+    description: "CWA's annual two-day legislative event in Sacramento. Includes light luncheon, legislative briefing, Cornucopia Dinner with sponsors and guests, and legislative visits. $125 per person at the Sheraton Grand. Registration deadline April 13th.",
     featured: false,
     category: "Advocacy",
     href: "/events",

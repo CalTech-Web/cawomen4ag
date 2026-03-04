@@ -65,7 +65,7 @@ export default function RootLayout({
     <html lang="en" className={`${fraunces.variable} ${plusJakarta.variable}`}>
       <body className="antialiased bg-white text-gray-900">
         <Header />
-        <main>{children}</main>
+        <main className="pt-[75px]">{children}</main>
         <Footer />
       </body>
     </html>
