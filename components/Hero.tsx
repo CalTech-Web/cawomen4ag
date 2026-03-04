@@ -73,10 +73,10 @@ export default function Hero({
   }
 
   return (
-    <section className="relative w-full max-w-[1920px] mx-auto min-h-[50vh] flex items-center justify-center text-center">
+    <section className="relative max-w-7xl mx-auto mt-[75px] rounded-2xl overflow-hidden min-h-[40vh] flex items-center justify-center text-center">
       {bgImage && (
         <>
-          <Image src={bgImage} alt="" fill className="object-cover" priority sizes="100vw" />
+          <Image src={bgImage} alt="" fill className="object-cover" priority sizes="(max-width: 1280px) 100vw, 1280px" />
           <div className="absolute inset-0 bg-gradient-to-br from-cwa-dark/90 to-cwa-purple/80" />
         </>
       )}
@@ -84,7 +84,7 @@ export default function Hero({
         <div className="absolute inset-0 bg-gradient-to-br from-cwa-dark to-cwa-purple" />
       )}
 
-      <div className="relative z-10 max-w-3xl mx-auto px-6 py-65">
+      <div className="relative z-10 max-w-3xl mx-auto px-6 py-20">
         {subtitle && (
           <p className="font-sans font-semibold text-cwa-gold text-xs uppercase tracking-[0.25em] mb-3">
             {subtitle}

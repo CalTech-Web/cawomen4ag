@@ -155,7 +155,7 @@ export default function AboutPage() {
         subtitle="About Us"
         title="Fifty Years of Fighting for California Agriculture"
         description="Founded in 1975, California Women For Agriculture has grown from 55 founding members to 1,500+ across 19 chapters, united by a single conviction: California agriculture deserves a strong voice."
-        bgImage="/images/noah-buscher-x8ZStukS2PM-unsplash.jpg"
+        bgImage="/images/pexels-pixabay-461960.jpg"
         compact
       />
 
