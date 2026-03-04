@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface EventCardProps {
   title: string;
   date: string;
@@ -5,9 +7,10 @@ interface EventCardProps {
   description?: string;
   featured?: boolean;
   category?: string;
+  href?: string;
 }
 
-export default function EventCard({ title, date, location, description, featured = false }: EventCardProps) {
+export default function EventCard({ title, date, location, description, featured = false, href }: EventCardProps) {
   return (
     <div className={`bg-white rounded-xl border overflow-hidden h-full flex flex-col transition-all duration-200 hover:border-cwa-purple/30 ${
       featured ? "border-cwa-gold/40" : "border-gray-100/80"
@@ -28,6 +31,17 @@ export default function EventCard({ title, date, location, description, featured
             <span className="w-1.5 h-1.5 rounded-full bg-cwa-gold" />
             Featured Event
           </span>
+        )}
+        {href && (
+          <Link
+            href={href}
+            className="mt-5 inline-flex items-center gap-2 text-cwa-purple font-sans font-semibold text-sm hover:underline"
+          >
+            Learn More
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
         )}
       </div>
     </div>
