@@ -17,6 +17,7 @@ export default function FoundationPage() {
         subtitle="CWA Foundation"
         title="Investing in the Next Generation of Agricultural Leaders"
         description="The California Women For Agriculture Foundation was launched as a bold new chapter in our 50-year legacy, equipping young women with the education, experiences, and networks they need to lead California agriculture into the future."
+        bgImage="/images/pexels-photo-2331884.jpeg"
         compact
       />
 
