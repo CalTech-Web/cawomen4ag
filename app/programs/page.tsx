@@ -16,6 +16,7 @@ export default function ProgramsPage() {
         subtitle="What We Do"
         title="Programs That Move California Agriculture Forward"
         description="From Sacramento to Washington D.C., from classrooms to farm fields, CWA's programs educate, advocate, and invest in the future of California agriculture."
+        bgImage="/images/almond-tree.jpg"
         compact
       />
 
