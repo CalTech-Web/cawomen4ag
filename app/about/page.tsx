@@ -31,7 +31,7 @@ const executiveBoard = [
     name: "Nanette Simonian",
     chapter: "Central Valley Chapter",
     title: "President Elect",
-    photo: "/images/Nanette-Simonian-jpg-qik20htzkrp0o0pbeijqoz77s3msbyd5stg62ydjnc-qlr09c5f7jre1lj0a2p18ov09lqnmp3ojq41bexdx4.jpg",
+    photo: "/images/nanette-simonian.jpg",
   },
   {
     name: "Sandy Fiack",
@@ -100,7 +100,7 @@ const districtDirectors = [
     name: "Summer Spraggins",
     chapter: "Palo Verde Chapter",
     title: "Southern District",
-    photo: "/images/Summer-Scroggins-Image-qdpt917s2zvjem2jgb6ip8d41p0kehr86998115588-qdptb5cpgkrrj0zy3q3at75g5wlapz5hgq3jwg0988.webp",
+    photo: "/images/summer-spraggins.webp",
   },
   {
     name: "Victoria Weatherly",
