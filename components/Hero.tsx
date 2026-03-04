@@ -84,7 +84,7 @@ export default function Hero({
         <div className="absolute inset-0 bg-gradient-to-br from-cwa-dark to-cwa-purple" />
       )}
 
-      <div className="relative z-10 max-w-3xl mx-auto px-6 py-24">
+      <div className="relative z-10 max-w-3xl mx-auto px-6 py-65">
         {subtitle && (
           <p className="font-sans font-semibold text-cwa-gold text-xs uppercase tracking-[0.25em] mb-3">
             {subtitle}
