@@ -128,6 +128,7 @@ export default function ChaptersPage() {
         subtitle="Our Chapters"
         title="19 Chapters Across the Golden State"
         description="From Butte County in the north to the Mexican border in the south, CWA chapters connect agricultural advocates, farmers, and supporters in every major growing region of California."
+        bgImage="/images/pexels-pixabay-461960.jpg"
         compact
       />
 
