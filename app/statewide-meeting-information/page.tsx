@@ -27,7 +27,7 @@ export default function StatewideMinfoPage() {
         subtitle="SWM Information"
         title="Statewide Meeting Information"
         description="Access meeting reports and related documents from CWA statewide meetings."
-        bgImage="/images/pexels-pixabay-461960.jpg"
+        bgImage="/images/noah-buscher-x8ZStukS2PM-unsplash.jpg"
         compact
       />
 
