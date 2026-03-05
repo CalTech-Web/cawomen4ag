@@ -58,6 +58,7 @@ export default function MembershipPage() {
       <Hero
         subtitle="Membership"
         title="Our Voice for California Agriculture"
+        bgImage="/images/pexels-photo-16439600.jpeg"
         compact
       />
 
