@@ -144,7 +144,7 @@ export default function DonorsPage() {
         subtitle="Sponsor Opportunities"
         title="Donors"
         description="Support California Women For Agriculture and help champion the future of California agriculture."
-        bgImage="/images/pexels-pixabay-461960.jpg"
+        bgImage="/images/pexels-photo-2631885.jpeg"
         compact
       />
 
