@@ -38,7 +38,7 @@ const navLinks: NavLink[] = [
       { href: "/members-only", label: "Members Only" },
     ],
   },
-  { href: "mailto:statecwa@gmail.com", label: "Contact" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Header() {
