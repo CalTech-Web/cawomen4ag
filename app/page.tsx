@@ -200,21 +200,22 @@ export default function HomePage() {
       </section>
 
       {/* Programs */}
-      <section className="bg-gradient-to-b from-cwa-cream to-white py-24 sm:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-cwa-dark py-24 sm:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-cwa-purple/30 via-transparent to-transparent" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="font-sans font-semibold text-cwa-purple text-[11px] uppercase tracking-[0.2em] mb-3">
+            <p className="font-sans font-semibold text-cwa-gold text-[11px] uppercase tracking-[0.2em] mb-3">
               What We Do
             </p>
-            <h2 className="font-heading font-semibold text-cwa-dark text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight mb-5">
+            <h2 className="font-heading font-semibold text-white text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight mb-5">
               Programs That Move Agriculture Forward
             </h2>
-            <p className="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="text-white/60 text-lg max-w-2xl mx-auto leading-relaxed">
               From the Capitol to the classroom, CWA champions agriculture through advocacy, education, and community.
             </p>
           </div>
           <FadeIn>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
               {programs.map((program, i) => (
                 <ProgramCard key={i} {...program} />
               ))}
