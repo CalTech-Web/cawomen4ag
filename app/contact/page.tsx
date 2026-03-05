@@ -59,6 +59,7 @@ export default function ContactPage() {
       <Hero
         subtitle="Contact"
         title="Contact"
+        bgImage="/images/pexels-photo-365839.jpeg"
         compact
       />
 
