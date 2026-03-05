@@ -35,14 +35,15 @@ export default function AgBitesAug16Page() {
 
             <div className="bg-white rounded-2xl p-8 sm:p-10 shadow-sm border border-gray-100">
               <p className="font-sans font-semibold text-cwa-green text-[11px] uppercase tracking-[0.2em] mb-3">
-                ABC AG Bites
+                Ag Facts from Farm to Fork
               </p>
-              <h2 className="font-heading font-semibold text-cwa-dark text-3xl sm:text-4xl leading-tight mb-6">
-                August 16
+              <h2 className="font-heading font-semibold text-cwa-dark text-3xl sm:text-4xl leading-tight mb-2">
+                California Plums
               </h2>
-              <div className="prose prose-gray max-w-none font-sans">
+              <p className="text-cwa-purple font-sans font-semibold text-sm mb-6">Ag Bites Club</p>
+              <div className="font-sans">
                 <p className="text-gray-600 text-base leading-relaxed">
-                  Weekly agriculture news updates from ABC covering policy, markets, and industry developments.
+                  Plums are stone fruits and belong to the rose family and are related to peaches, apricots, and cherries. According to CDFA, California produces over 70% of the plums eaten worldwide. Plums are even thought to help with memory loss and are a great source of potassium which can help lower blood pressure and promote heart health.
                 </p>
               </div>
             </div>

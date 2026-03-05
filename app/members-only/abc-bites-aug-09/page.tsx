@@ -35,14 +35,15 @@ export default function AgBitesAug09Page() {
 
             <div className="bg-white rounded-2xl p-8 sm:p-10 shadow-sm border border-gray-100">
               <p className="font-sans font-semibold text-cwa-green text-[11px] uppercase tracking-[0.2em] mb-3">
-                ABC AG Bites
+                Ag Facts from Farm to Fork
               </p>
-              <h2 className="font-heading font-semibold text-cwa-dark text-3xl sm:text-4xl leading-tight mb-6">
-                August 9
+              <h2 className="font-heading font-semibold text-cwa-dark text-3xl sm:text-4xl leading-tight mb-2">
+                California Peaches
               </h2>
-              <div className="prose prose-gray max-w-none font-sans">
+              <p className="text-cwa-purple font-sans font-semibold text-sm mb-6">Ag Bites Club</p>
+              <div className="font-sans">
                 <p className="text-gray-600 text-base leading-relaxed">
-                  Agriculture news bites covering the latest updates and developments in California agriculture.
+                  Did you know that California grows 99% of the world&apos;s supply of cling peaches? This tasty summer treat is in season right now and can be a great substitute for other types of sweets in baking recipes. Check out these great resources and ideas from the California Canning Peach Association (CCPA). Established in 1922, it is California&apos;s oldest agricultural cooperative and is the nation&apos;s oldest farm bargaining association.
                 </p>
               </div>
             </div>

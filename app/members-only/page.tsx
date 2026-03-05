@@ -13,25 +13,25 @@ export const metadata: Metadata = {
 
 const agBites = [
   {
-    title: "ABC AG Bites",
+    title: "California Peaches",
     date: "Aug 09",
     slug: "abc-bites-aug-09",
     description:
-      "Agriculture news bites covering the latest updates and developments in California agriculture.",
+      "Did you know that California grows 99% of the world's supply of cling peaches? Learn about the California Canning Peach Association (CCPA), established in 1922.",
   },
   {
-    title: "ABC AG Bites",
+    title: "California Plums",
     date: "Aug 16",
     slug: "abc-ag-bites-aug-16",
     description:
-      "Weekly agriculture news updates from ABC covering policy, markets, and industry developments.",
+      "California produces over 70% of the plums eaten worldwide. Learn how plums promote heart health and more.",
   },
   {
-    title: "ABC AG Bites",
+    title: "National Bacon Day",
     date: "Aug 21",
     slug: "abc-ag-bites-aug-21",
     description:
-      "Agriculture industry news bites featuring the latest from California farms and policy updates.",
+      "Celebrating National Bacon Day with ag facts from farm to fork and great resources from California agriculture.",
   },
 ];
 
