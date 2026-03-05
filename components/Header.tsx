@@ -31,7 +31,13 @@ const navLinks: NavLink[] = [
       { href: "https://cawomen4ag.com/wp-content/uploads/2025/03/Introduction-to-web-donor-application.pdf", label: "Download Donor Application", external: true },
     ],
   },
-  { href: "/membership", label: "Membership" },
+  {
+    href: "/membership",
+    label: "Membership",
+    children: [
+      { href: "/members-only", label: "Members Only" },
+    ],
+  },
   { href: "/contact", label: "Contact" },
 ];
 
