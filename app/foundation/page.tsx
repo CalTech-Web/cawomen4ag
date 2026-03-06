@@ -199,6 +199,30 @@ export default function FoundationPage() {
         </div>
       </SectionWrapper>
 
+      {/* Chapter Pass-Through Donation & Fiscal Sponsorship */}
+      <SectionWrapper bg="white" py="lg">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="font-sans font-semibold text-cwa-green text-[11px] uppercase tracking-[0.2em] mb-4">
+            Tax-Deductible Giving
+          </p>
+          <h2 className="font-heading font-semibold text-cwa-dark text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight mb-6">
+            Chapter Pass-Through Donations
+          </h2>
+          <p className="text-gray-600 text-lg leading-relaxed mb-4 font-sans">
+            The California Women for Agriculture Foundation is a 501(c)(3) nonprofit organization (Tax ID #77-0546526). Donations made through the Foundation&apos;s Chapter Pass-Through program may be tax-deductible to the extent allowed by law.
+          </p>
+          <p className="text-gray-600 text-base leading-relaxed mb-4 font-sans">
+            CWA chapters can use this program to process donor contributions through the Foundation, providing donors with tax-deductible receipts while directing funds to support chapter programs and activities. The Foundation retains a 5% administrative fee for fiscal sponsorship and tax-receipt processing services.
+          </p>
+          <p className="text-gray-600 text-base leading-relaxed mb-8 font-sans">
+            Download the form below to get started. Completed forms and funds should be sent to the California Women for Agriculture Foundation at 1521 I Street, Sacramento, CA 95814.
+          </p>
+          <Button href="/CWAF-tax-deduct-donation.pdf" variant="secondary" size="lg" external>
+            Chapter Pass-Through Donation and Fiscal Sponsorship Form
+          </Button>
+        </div>
+      </SectionWrapper>
+
       {/* Support the Foundation */}
       <SectionWrapper bg="dark" py="lg">
         <div className="text-center max-w-2xl mx-auto">
