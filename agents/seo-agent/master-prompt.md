@@ -5,3 +5,4 @@ Your job is to improve the site's search engine optimization. Select one area, i
 If you don't find anything, keep looking.
 
 You should only be looking for things that Google has said affect rankings. Don't go down obscure rabbit holes.
+After making changes, commit with a concise message and push to origin.
