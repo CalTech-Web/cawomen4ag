@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import SectionWrapper from "@/components/SectionWrapper";
@@ -41,6 +42,15 @@ export default function AgBitesAug21Page() {
                 National Bacon Day
               </h2>
               <p className="text-cwa-purple font-sans font-semibold text-sm mb-6">Ag Bites Club</p>
+              <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden mb-6">
+                <Image
+                  src="/images/bacon.jpg"
+                  alt="Crispy cooked bacon strips"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 700px"
+                />
+              </div>
               <div className="font-sans">
                 <p className="text-gray-600 text-base leading-relaxed">
                   Did you know that California grows 99% of the world&apos;s supply of cling peaches? This tasty summer treat is in season right now and can be a great substitute for other types of sweets in baking recipes. Check out these great resources and ideas from the California Canning Peach Association (CCPA). Established in 1922, it is California&apos;s oldest agricultural cooperative and is the nation&apos;s oldest farm bargaining association.

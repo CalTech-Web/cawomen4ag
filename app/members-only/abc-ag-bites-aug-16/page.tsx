@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import SectionWrapper from "@/components/SectionWrapper";
@@ -41,6 +42,15 @@ export default function AgBitesAug16Page() {
                 California Plums
               </h2>
               <p className="text-cwa-purple font-sans font-semibold text-sm mb-6">Ag Bites Club</p>
+              <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden mb-6">
+                <Image
+                  src="/images/plums.jpg"
+                  alt="Fresh California plums"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 700px"
+                />
+              </div>
               <div className="font-sans">
                 <p className="text-gray-600 text-base leading-relaxed">
                   Plums are stone fruits and belong to the rose family and are related to peaches, apricots, and cherries. According to CDFA, California produces over 70% of the plums eaten worldwide. Plums are even thought to help with memory loss and are a great source of potassium which can help lower blood pressure and promote heart health.
