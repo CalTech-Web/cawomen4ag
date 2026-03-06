@@ -200,26 +200,68 @@ export default function FoundationPage() {
       </SectionWrapper>
 
       {/* Chapter Pass-Through Donation & Fiscal Sponsorship */}
-      <SectionWrapper bg="white" py="lg">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="font-sans font-semibold text-cwa-green text-[11px] uppercase tracking-[0.2em] mb-4">
-            Tax-Deductible Giving
-          </p>
-          <h2 className="font-heading font-semibold text-cwa-dark text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight mb-6">
-            Chapter Pass-Through Donations
-          </h2>
-          <p className="text-gray-600 text-lg leading-relaxed mb-4 font-sans">
-            The California Women for Agriculture Foundation is a 501(c)(3) nonprofit organization (Tax ID #77-0546526). Donations made through the Foundation&apos;s Chapter Pass-Through program may be tax-deductible to the extent allowed by law.
-          </p>
-          <p className="text-gray-600 text-base leading-relaxed mb-4 font-sans">
-            CWA chapters can use this program to process donor contributions through the Foundation, providing donors with tax-deductible receipts while directing funds to support chapter programs and activities. The Foundation retains a 5% administrative fee for fiscal sponsorship and tax-receipt processing services.
-          </p>
-          <p className="text-gray-600 text-base leading-relaxed mb-8 font-sans">
-            Download the form below to get started. Completed forms and funds should be sent to the California Women for Agriculture Foundation at 1521 I Street, Sacramento, CA 95814.
-          </p>
-          <Button href="/CWAF-tax-deduct-donation.pdf" variant="secondary" size="lg" external>
-            Chapter Pass-Through Donation and Fiscal Sponsorship Form
-          </Button>
+      <SectionWrapper bg="green" py="lg">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="font-sans font-semibold text-cwa-gold text-[11px] uppercase tracking-[0.2em] mb-4">
+              Tax-Deductible Giving
+            </p>
+            <h2 className="font-heading font-semibold text-white text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight mb-4">
+              Chapter Pass-Through Donations
+            </h2>
+            <p className="text-white/85 text-lg leading-relaxed max-w-2xl mx-auto font-sans">
+              The CWA Foundation is a 501(c)(3) nonprofit (Tax ID #77-0546526). Donations made through the Chapter Pass-Through program may be tax-deductible to the extent allowed by law.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
+            {[
+              {
+                icon: (
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                ),
+                title: "Tax-Deductible Receipts",
+                description: "Donors receive official tax-deductible receipts for contributions processed through the Foundation.",
+              },
+              {
+                icon: (
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                ),
+                title: "Fiscal Sponsorship",
+                description: "Chapters direct funds to their programs while the Foundation handles all administrative processing.",
+              },
+              {
+                icon: (
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                ),
+                title: "5% Admin Fee",
+                description: "A small administrative fee covers fiscal sponsorship and tax-receipt processing services.",
+              },
+            ].map((item, i) => (
+              <div key={i} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/15">
+                <div className="w-12 h-12 bg-cwa-gold/20 text-cwa-gold rounded-xl flex items-center justify-center mx-auto mb-4">
+                  {item.icon}
+                </div>
+                <h3 className="font-heading font-semibold text-white text-lg mb-2">{item.title}</h3>
+                <p className="text-white/75 text-sm leading-relaxed font-sans">{item.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <p className="text-white/70 text-sm mb-6 font-sans">
+              Send completed forms and funds to: California Women for Agriculture Foundation, 1521 I Street, Sacramento, CA 95814
+            </p>
+            <Button href="/CWAF-tax-deduct-donation.pdf" variant="primary" size="lg" external>
+              Chapter Pass-Through Donation and Fiscal Sponsorship Form
+            </Button>
+          </div>
         </div>
       </SectionWrapper>
 
