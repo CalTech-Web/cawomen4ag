@@ -1,16 +1,13 @@
-# cawomen4ag
+# CA Women for Agriculture
 
-Tech stack: Next.js, TypeScript, Tailwind CSS, Vercel
-Site: https://cawomen4ag.com
-Dev URL: https://cawomen4ag.vercel.app
-
+Next.js, TypeScript, Tailwind CSS
+Deployed on Vercel: https://cawomen4ag.vercel.app
+Production: https://cawomen4ag.com
+Local dev: http://localhost:3000
 
 ## Run Agents
 
-WORK=~/ctw/cawomen4ag/agents/design-agent MODEL="sonnet" MAX_LOOPS=5 bash ~/ctw/ENGINE/run.sh
-
-WORK=~/ctw/cawomen4ag/agents/content-agent MODEL="sonnet" MAX_LOOPS=5 bash ~/ctw/ENGINE/run.sh
-
-WORK=~/ctw/cawomen4ag/agents/seo-agent MODEL="sonnet" MAX_LOOPS=5 bash ~/ctw/ENGINE/run.sh
-
-WORK=~/ctw/cawomen4ag/agents/pagespeed-agent MODEL="sonnet" MAX_LOOPS=5 bash ~/ctw/ENGINE/run.sh
+WORK=/Users/brandonhopkins/Projects/cawomen4ag/agents/design-agent MODEL="sonnet" MAX_LOOPS=5 bash ~/Projects/claude-lab/ENGINE/run.sh
+WORK=/Users/brandonhopkins/Projects/cawomen4ag/agents/content-agent MODEL="sonnet" MAX_LOOPS=5 bash ~/Projects/claude-lab/ENGINE/run.sh
+WORK=/Users/brandonhopkins/Projects/cawomen4ag/agents/seo-agent MODEL="sonnet" MAX_LOOPS=5 bash ~/Projects/claude-lab/ENGINE/run.sh
+WORK=/Users/brandonhopkins/Projects/cawomen4ag/agents/pagespeed-agent MODEL="sonnet" MAX_LOOPS=5 bash ~/Projects/claude-lab/ENGINE/run.sh
